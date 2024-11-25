@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include root/head.html %}
+    <body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+        <div id="royal_preloader"></div>
+        {% include root/navbar.html %}
+
+        {{ content }}
+
+        {% include root/javascript.html %}
+    </body>
+</html>
