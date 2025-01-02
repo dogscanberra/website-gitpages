@@ -1,0 +1,161 @@
+
+/* =Tags
+-------------------------------------------------------------- */
+:root {
+    --case-studies-pixel-height: 500px;
+    --case-studies-pixel-width: 0px;
+    --tag-box-pixel-height: 100px;
+}
+
+.tag-wheel-container {
+    width: 100%;
+    height: var(--case-studies-pixel-height);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 14px;
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+    
+    overflow: hidden;
+    position: relative;
+    word-wrap: normal;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.tag-wheel-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tag-wheel-items {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tag-wheel-item {
+    display: flex;
+    width: 100%;
+    height: var(--tag-box-pixel-height);
+    justify-content: center;
+    align-items: center;
+    /* line-height: 50px; */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: visible;
+    border-bottom: 1px solid #ddd;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff;
+}
+
+.tag-wheel-item:hover {
+    background-color: #adaddd;
+    color: #fff;
+}
+.tag-wheel-item-default {
+    color: #fff;
+    background-color: transparent;
+    border-color: #535353;
+}
+/* Highlight the selected item */
+.tag-wheel-item.selected {
+    background-color: #adaddd;
+    color: #fff;
+}
+.tag-wheel-item-default.active, .tag-wheel-item-default.active.focus, .tag-wheel-item-default.active:focus, .tag-wheel-item-default.active:hover, .tag-wheel-item-default:active.focus, .tag-wheel-item-default:active:focus, .tag-wheel-item-default:active:hover {
+    background-color: #8980fe;
+    color: #fff;
+}
+.tag-wheel-item.active.focus, .tag-wheel-item.active:focus, .tag-wheel-item.focus, .tag-wheel-item:active.focus, .tag-wheel-item:active:focus, .tag-wheel-item:focus {
+    color: #fff;
+    background-color: #8980fe;
+    border-color: #8980fe;
+}
+
+/* Case Studies 
+--------------------------------------------------------------------------*/
+.case-wheel-container {
+    width: 100%;
+    height: 500px;
+    /* var(--case-studies-pixel-height); */
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 14px;
+        /* -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s; */
+    
+    overflow: hidden;
+    position: relative;
+    word-wrap: normal;
+    border: 0px solid #333;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.case-wheel-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.case-wheel-items {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease-in-out;
+}
+
+.case-wheel-item {
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 50px; */
+    /* white-space: normal; */
+    /* word-wrap: break-word; */
+    /* overflow-wrap: break-word; */
+    /* overflow: visible; */
+    border-bottom: 1px solid #ddd;
+    background-color: #f0f0f000;
+    cursor: pointer;
+    color: #fff;
+}
+
+.case-wheel-item:hover {
+    background-color: #adaddd;
+    color: #fff;
+}
+.case-wheel-item-default {
+    color: #fff;
+    background-color: transparent;
+    border-color: #535353;
+}
+/* Highlight the selected item */
+.case-wheel-item.selected {
+    background-color: #adaddd;
+    color: #fff;
+}
+.case-wheel-item-default.active.focus, .case-wheel-item-default.active:focus, .case-wheel-item-default.active:hover, .case-wheel-item-default:active.focus, .case-wheel-item-default:active:focus, .case-wheel-item-default:active:hover {
+    background-color: #8980fe;
+    color: #fff;
+}
+.case-wheel-item.active.focus, .case-wheel-item.active:focus, .case-wheel-item.focus, .case-wheel-item:active.focus, .case-wheel-item:active:focus, .case-wheel-item:focus {
+    color: #fff;
+    background-color: #8980fe;
+    border-color: #8980fe;
+}

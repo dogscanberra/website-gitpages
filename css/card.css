@@ -1,0 +1,43 @@
+.card {
+  height: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left: 1px solid #313131;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thumbnail-wrapper {
+  height: 60%;
+  border: 1px solid #313131;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.thumbnail {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem !important;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  thumbnail {
+    height: 200px;
+  }
+}
+
+.thumbnail img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.label {
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  line-height: 3rem !important;
+}

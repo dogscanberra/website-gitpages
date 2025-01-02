@@ -1,0 +1,45 @@
+.team-name {
+    font-family: "Playwrite AU VIC", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 30px;
+}
+.team-role {
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.team-detail:nth-child(odd){
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.team-detail:nth-child(even){
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.team-image:nth-child(odd){
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.team-image:nth-child(even){
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.staff-blurb {
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
+    margin: 10px 10px;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+}

@@ -1,0 +1,7 @@
+a.fa-envelope::before {
+    content: "\f0e0";
+    transition: all 0.5s ease;
+}
+a.fa-envelope:hover::before {
+    content: "\f2b6";
+}

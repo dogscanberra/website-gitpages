@@ -1,0 +1,20 @@
+michael:
+  name: Michael Matheson-Deng
+  email: michaelmd@dogscbr.org
+  picture: 
+  role: Managing Director
+toby:
+  name: Toby Hardcastle
+  email: tobyh@dogscbr.org
+  picture:
+  role: Director
+bryce:
+  name: Bryce Taylor
+  email: brycet@dogscbr.org
+  picture:
+  role: Director
+manish:
+  name: Manish Paida
+  email: treasurer@dogscbr.org
+  picture:
+  role: Treasurer

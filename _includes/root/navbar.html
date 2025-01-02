@@ -1,29 +1,24 @@
 <header>
     <!-- Navigation -->
-     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="False">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand {% if page.url == '/' %} scroll-link{% endif %}"
-                        href="{{ site.baseurl }}/#home" data-id="home">
-                        <img src="{{ site.url }}{{ site.baseurl }}/assets/dogs-canberra-logo.jpg" height="39px"
-                            class="logo"></img></a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ site.baseurl }}/#home" data-id="home" {% if page.url=="/" %} class="scroll-link" {% endif %}>Home</a> </li>
-                        <li><a href="{{ site.baseurl }}/#contact" data-id="contact" {% if page.url=="/" %} class="scroll-link" {% endif %}>Contact</a> </li>
-                        <li><a href='{{ site.baseurl }}/about.html' data-id="about">About Us</a> </li>
-                    </ul>
-                </div>
-            </div>
+     <nav class="navbar navbar-light navbar-default fixed-top navbar-expand-lg">
+         <a class="navbar-brand {% if page.url == '/' %} scroll-link{% endif %}"
+             href="{{ site.baseurl }}/#home" data-id="home">
+             <img src="{{ site.url }}{{ site.baseurl }}/assets/dogs-canberra-logo.jpg" height="39px"
+                 class="logo"> </img>
+         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-dcbr" aria-controls="navbar-dcbr" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbar-dcbr">
+            <ul class="navbar-nav ml-auto mt-0 mr-0">
+                <li class="nav-item"><a href="{{ site.baseurl }}/#home" data-id="home" {% if page.url=="/" %} class="scroll-link" {% endif %}>Home</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs">The Dogs</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/team.html' data-id="team">The Team</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/social.html' data-id="social">Social Media</a> </li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/contact.html" data-id="contact">Contact</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/about.html' data-id="about">About Us</a> </li>
+            </ul>
         </div>
      </nav>
 </header>
