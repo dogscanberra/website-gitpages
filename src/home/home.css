@@ -33,9 +33,11 @@ button.paw-button {
   align-items: center;
   justify-content: center;
 }
+
 img.paw-button {
   content: url('/assets/TransPaw.png');
 }
+
 button.paw-button.active > img.paw-button {
   content: url('/assets/ColourPaw.png')
 }
@@ -135,6 +137,7 @@ button.paw-button.active > img.paw-button {
         opacity: 0;
     }
 }
+
 /* photobooth */
 .dog-photo {
   display: flex;
@@ -149,69 +152,69 @@ button.paw-button.active > img.paw-button {
     padding-bottom: 2%;
   }
   
-  .carousel-inner {
-    position: relative;
-    /* width: 100%; */
-    height: 50vh;
-    overflow: hidden;
-  }
-  
-  .carousel-item {
-    position: relative;
-    display: none;
-    opacity: 0;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 50vh;
-    transition: -webkit-transform 0.6s ease;
-    transition: transform 0.6s ease;
-    transition: opacity 0.9s ease-in-out;
-    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-  }
-  
-  .carousel-item-start {
-    visibility: hidden;
-  }
+.carousel-inner {
+  position: relative;
+  /* width: 100%; */
+  height: 50vh;
+  overflow: hidden;
+}
 
-  .carousel-item.active,
-  .carousel-item-next,
-  .carousel-item-prev {
-    display: flex;
-    opacity: 1;
-    justify-content: center;
-    align-items: center;
-  }
+.carousel-item {
+  position: relative;
+  display: none;
+  opacity: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50vh;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: opacity 0.9s ease-in-out;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.carousel-item-start {
+  visibility: hidden;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
   
-  .carousel-item-next,
-  .carousel-item-prev {
-    position: absolute;
-    top: 0;
-  }
-  
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
   .carousel-item-next.carousel-item-left,
   .carousel-item-prev.carousel-item-right {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
+}
   
-  @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
-    .carousel-item-next.carousel-item-left,
-    .carousel-item-prev.carousel-item-right {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  .carousel-item-next,
-  .active.carousel-item-right {
+.carousel-item-next,
+.active.carousel-item-right {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-  }
+}
   
 @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
 .carousel-item-next,
@@ -219,13 +222,13 @@ button.paw-button.active > img.paw-button {
       -webkit-transform: translate3d(100%, 0, 0);
       transform: translate3d(100%, 0, 0);
     }
-  }
+}
   
 .carousel-item-prev,
 .active.carousel-item-left {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-  }
+}
   
 @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
     .carousel-item-prev,
@@ -233,7 +236,7 @@ button.paw-button.active > img.paw-button {
       -webkit-transform: translate3d(-100%, 0, 0);
       transform: translate3d(-100%, 0, 0);
     }
-  }
+}
   
 .carousel-control-prev,
 .carousel-control-next {
@@ -292,7 +295,7 @@ button.paw-button.active > img.paw-button {
 .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: -10px;
+    bottom: 0px;
     left: 0;
     z-index: 15;
     display: -webkit-box;
