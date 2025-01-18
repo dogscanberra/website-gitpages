@@ -1,22 +1,16 @@
 <div class="container">
-    <div class="row">
-        <div class="text-center pt40 w-100">
-            <h2 class="page-subtitle">Services</h2>
+    <div class="row pt20">
+        <div class="col-12 col-sm-6"><!--Left: Ambassador-->
+            <div class="row w-100 mb20">
+                {% include_relative src/about/ambassador.html %}
+            </div>
         </div>
-        <div>
-            Keep an eye on this space to hear more about our upcoming 2025 Pilot Program.  Online booking will become available through this site!
-        </div>
-    <div class="row" style="align-items: center;">
-        <div class="text-center pt40 w-100">
-            <h2 class="page-subtitle">Governance</h1>
-        </div>
-        <div>
-    Dogs Canberra Limited is incorporated as a Public Company Limited by Guarantee and is a Registered Charity under the Australian Charities and Not-for-profits Commission (ACNC). 
-    This status requires us to have members and hold meetings from time to time with an elected council of governing Board Members. 
-    The Board is led by the Managing Director.
-    
-    We are governed by our Constitution, and our Regulations, Policies, and By-Laws. 
-    These documents are available on our <a href="https://drive.google.com/drive/folders/1cxDUP2KbGQFzyJVEOHxQH2EaDZf4RF53?usp=sharing" target="_blank" ><i class="fab fa-google-drive"></i> Google Drive </a></div>
+        <div class="col-12 col-sm-6">
+            <div class="row w-100 mb20">
+                {% include_relative src/about/services.html %}
+            </div>
+            <div class="row w-100 mb20">
+                {% include_relative src/about/governance.html %}
             </div>
         </div>
     </div>

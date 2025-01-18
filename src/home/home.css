@@ -293,10 +293,10 @@ button.paw-button.active > img.paw-button {
   }
   
 .carousel-indicators {
-    position: absolute;
+    /* position: absolute;
     right: 0;
     bottom: 0px;
-    left: 0;
+    left: 0; */
     z-index: 15;
     display: -webkit-box;
     display: -ms-flexbox;

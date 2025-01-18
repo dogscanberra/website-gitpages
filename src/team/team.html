@@ -1,6 +1,6 @@
 <div id="dogscbr-team" class="row">
     {% for person in site.team %}
-    <div class="col-12 staff-blurb mb 10">
+    <div class="col-11 col-sm-12 staff-blurb mb10 pb10 pt10">
         <div class="row">
             <div class="col-12 col-sm-9 pt15 pb15 team-detail">
                 <p class="team-name">
@@ -11,7 +11,7 @@
                 </p>
                 <p> {{ person.content | markdownify }} </p>
             </div>
-            <div class="col-12 col-sm-3 order-3 d-flex team-image">
+            <div class="col-10 col-sm-3 order-3 d-flex team-image">
                 <img src="{{ person.img }}" width="100%">
             </div>
         </div>

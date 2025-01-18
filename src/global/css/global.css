@@ -1,13 +1,14 @@
+
 .welcome-title {
   color: var(--primary);
-  font-family: "Playwrite AU VIC", serif;
+  font-family: "Merriweather", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-size: 72px;
 }
 
 .page-subtitle {
-  font-family: "Playwrite AU VIC", serif;
+  font-family: "Merriweather", serif;
   font-optical-sizing: auto;
   font-weight: 1200;
   font-size: 36px;
@@ -23,12 +24,18 @@
   }
 }
 
-/* For screens smaller than 480px (e.g., very small mobile screens) */
+/* For screens smaller than 480px (e.g., small mobile screens) */
 @media (max-width: 480px) {
   .welcome-title {
     font-size: 3rem;
   }
   .page-subtitle {
-    font-size: 1rem; /* Even smaller font size for very small screens */
+    font-size: 1.5rem; /* Even smaller font size for very small screens */
+  }
+}
+/* Make the big screens bigger? */
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1440px;
   }
 }
