@@ -1,0 +1,22 @@
+.pr30 {
+    padding-right: 80px;
+}
+.submit-button {
+    width: 100%;
+    color: #fff;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+}
+
+.member-form {
+    text-align: left;
+    width: 100%;
+}
+
+.member-form input {
+    width: 100%;
+    padding: 1% 1%;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+}
