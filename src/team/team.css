@@ -1,5 +1,14 @@
+.staff-tile {
+    display: flex;
+    /* width: 100%; */
+    /* flex-direction: column; */
+    margin: 2% 2%;
+    padding: 1% 1%;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+}
 .team-name {
-    font-family: "Playwrite AU VIC", serif;
+    font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-size: 30px;
@@ -33,13 +42,4 @@
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-}
-
-.staff-blurb {
-    display: flex;
-    width: 100%;
-    /* flex-direction: column; */
-    margin: 10px 10px;
-    border: 2px solid var(--primary);
-    border-radius: 15px;
 }

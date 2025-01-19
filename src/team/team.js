@@ -1,7 +1,7 @@
 window.onload = (function() {
     // Get team element and team members contained within it:
 var team = document.getElementById("dogscbr-team");
-var teamMembers = Array.prototype.slice.call(team.getElementsByClassName("staff-blurb"));
+var teamMembers = Array.prototype.slice.call(team.getElementsByClassName("staff-tile"));
     // Remove the team member elements from the team element
 teamMembers.forEach(function(member){
     team.removeChild(member)

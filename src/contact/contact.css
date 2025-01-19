@@ -1,7 +1,21 @@
-a.fa-envelope::before {
+i.fa-envelope::before {
     content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
     transition: all 0.5s ease;
 }
-a.fa-envelope:hover::before {
+i.fa-envelope:hover::before {
     content: "\f2b6";
+    font-family: "Font Awesome 5 Free";
+}
+a.mail-link::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    transition: all 0.5s ease;
+    font-weight: 300;
+}
+
+a.mail-link:hover::before {
+    content: "\f2b6";
+    font-weight: 300;
+    font-family: "Font Awesome 5 Free";
 }

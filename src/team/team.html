@@ -1,21 +1,27 @@
 <div id="dogscbr-team" class="row">
     {% for person in site.team %}
-    <div class="col-11 col-sm-12 staff-blurb mb10 pb10 pt10">
-        <div class="row">
-            <div class="col-12 col-sm-9 pt15 pb15 team-detail">
-                <p class="team-name">
-                    {{ person.name }}
+    <div class="col-12 col-sm-5 staff-tile mb10">
+        <div class="col-12 col-sm-6 pt15 pb15 team-detail">
+            <p class="team-name">
+                {{ person.firstname }} {{ person.lastname }}
+            </p>
+            <p class="team-role">
+                {{ person.role }}
+            </p>
+            <p> {% if person.email!="None" %}     
+                <a href="mailto:{{ person.email }}@dogscbr.org" class="mail-link">
+                    {{ person.email }}@dogscbr.org
+                </a> 
+                {% else %}
+                <p>
+                    {{ person.firstname }} does not have a Dogs Canbera email, but you can reach out to one of our <a href="{{ site.baseurl }}/contact.html">other email addresses</a>.
                 </p>
-                <p class="team-role">
-                    {{ person.role }}
-                </p>
-                <p> {{ person.content | markdownify }} </p>
-            </div>
-            <div class="col-10 col-sm-3 order-3 d-flex team-image">
-                <img src="{{ person.img }}" width="100%">
-            </div>
+                {% endif %}
+            </p>
+        </div>
+        <div class="col-12 col-sm-6 order-3 d-flex team-image">
+            <img src="{{ person.img }}" class="gallery-photo">
         </div>
     </div>
-
     {% endfor %}
 </div>
