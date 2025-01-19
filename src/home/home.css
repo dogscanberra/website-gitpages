@@ -1,5 +1,9 @@
 
 /* Home Page */
+.tag-line {
+  font-family: "Playwrite AU VIC", serif;
+}
+
 .paw {
     /* animation: float 20s linear infinite; */
     display: block;
