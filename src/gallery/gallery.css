@@ -1,0 +1,9 @@
+.photo-frame {
+    padding: 1% 1%;
+    display: block;
+}
+.gallery-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}

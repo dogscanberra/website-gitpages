@@ -1,0 +1,9 @@
+<div id="photo-gallery" class="row">
+    {% for image in site.static_files %}
+    {% if image.path contains 'fullphotogallery' %}
+    <div class="col-12 col-sm-4 photo-frame" data-slide-to>
+        <img src="{{ site.baseurl }}{{ image.path }}" class="gallery-photo">
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
