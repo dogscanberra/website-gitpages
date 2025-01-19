@@ -14,6 +14,19 @@
   font-size: 36px;
 }
 
+.sub-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+hr.dotted {
+  border-top: 3px dotted var(--primary)
+}
+
+/* Headings based on window size */
+
 @media (max-width: 768px) {
   .welcome-title {
     font-size: 2.5rem;
@@ -21,6 +34,10 @@
   
   .page-subtitle {
     font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .sub-heading {
+    font-size: 1.5rem;
   }
 }
 
@@ -32,8 +49,14 @@
   .page-subtitle {
     font-size: 1.5rem; /* Even smaller font size for very small screens */
   }
+  
+  .sub-heading {
+    font-size: 1.5rem;
+  }
 }
-/* Make the big screens bigger? */
+
+/* Actual max container size: */
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1440px;
