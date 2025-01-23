@@ -1,12 +1,15 @@
+.staff-container {
+    display: flex;
+    padding: 2% 2%;
+}
+
 .staff-tile {
     display: flex;
-    /* width: 100%; */
-    /* flex-direction: column; */
-    margin: 2% 2%;
     padding: 1% 1%;
     border: 2px solid var(--primary);
     border-radius: 15px;
 }
+
 .team-name {
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;

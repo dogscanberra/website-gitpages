@@ -1,26 +1,28 @@
 <div id="dogscbr-team" class="row">
     {% for person in site.team %}
-    <div class="col-12 col-sm-5 staff-tile mb10">
-        <div class="col-12 col-sm-6 pt15 pb15 team-detail">
-            <p class="team-name">
-                {{ person.firstname }} {{ person.lastname }}
-            </p>
-            <p class="team-role">
-                {{ person.role }}
-            </p>
-            <p> {% if person.email!="None" %}     
-                <a href="mailto:{{ person.email }}@dogscbr.org" class="mail-link">
-                    {{ person.email }}@dogscbr.org
-                </a> 
-                {% else %}
-                <p>
-                    {{ person.firstname }} does not have a Dogs Canbera email, but you can reach out to one of our <a href="{{ site.baseurl }}/contact.html">other email addresses</a>.
+    <div class="col-12 col-sm-6 staff-container"> <!--Container is empty, just provides spacing and padding -->
+        <div class="staff-tile"> <!--Provides the border and is the visible region-->
+            <div class="col-12 col-sm-6 pt15 pb15 team-detail"> <!--Text content for team tile-->
+                <p class="team-name">
+                    {{ person.firstname }} {{ person.lastname }}
                 </p>
-                {% endif %}
-            </p>
-        </div>
-        <div class="col-12 col-sm-6 order-3 d-flex team-image">
-            <img src="{{ person.img }}" class="gallery-photo">
+                <p class="team-role">
+                    {{ person.role }}
+                </p>
+                <p> {% if person.email!="None" %}     
+                    <a href="mailto:{{ person.email }}@dogscbr.org" class="mail-link">
+                        {{ person.email }}@dogscbr.org
+                    </a> 
+                    {% else %}
+                    <p>
+                        {{ person.firstname }} does not have a Dogs Canbera email, but you can reach out to one of our <a href="{{ site.baseurl }}/contact.html">other email addresses</a>.
+                    </p>
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 order-3 d-flex team-image"><!--Image content for team tile-->
+                <img src="{{ person.img }}" class="gallery-photo">
+            </div>
         </div>
     </div>
     {% endfor %}
