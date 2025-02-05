@@ -3,6 +3,11 @@
     <meta name="author" content="dogs-canberra" />
     <meta name="description" content="Canberra-based Community Dog Shelter">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content ="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if page.header %}: {{ page.header }} {% endif %}">
+    <meta property="og:image" content ="{{ site.baseurl }}/assets/branding/Banner.png">
+    <meta property="og:url" content ="{{ site.baseurl }}">
+    <meta property="og:type" content="website">
+    
     <title>
         {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if page.header %}: {{ page.header }} {% endif %}
     </title>
