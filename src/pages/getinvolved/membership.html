@@ -1,0 +1,31 @@
+<h2 class="page-subtitle">
+    Become a member:
+</h2>
+
+<div class="row">
+    <!-- Details -->
+    <div class="col-12 col-sm-7 text-justify pr30">
+        Become a member of DogsCBR! You'll have access to all our services, such as our Pilot Program, and you'll be able to vote and have a voice in what we do and how we do it.  We'd love to have you with us. <br><br>
+        Your data will be handled according to our <a href="{% link _policies/privacy.md %}">Privacy Policy</a>
+    </div>
+    <!-- Form -->
+    <div class="col-12 col-sm-5 member-form">
+        <p>
+            <label for="full-name"> Full Name: </label><br/>
+            <input type="text" required id="full-name" name="full-name"/>
+        </p>
+        <p>
+            <label for="email"> Contact Email: </label>
+            <input type="email" required id="email" name="email"
+            placeholder="contact@email.com"/>
+        </p>
+        <p>
+            <label for="phone"> Mobile Number: </label>
+            <input type="tel" id="phone" name="phone" 
+            pattern="[0-9]{4} [0-9]{3} [0-9]{3}"
+            placeholder="0412 345 678"/>
+        </p>
+        <button type="button" class="submit-button" onclick="submitData(displayModal);">Submit</button>
+    </div>
+
+</div>

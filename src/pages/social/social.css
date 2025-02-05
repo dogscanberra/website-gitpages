@@ -1,0 +1,71 @@
+.social-block {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.facebook-iframe {
+    width: 100%;
+    max-width: 500px;
+}
+
+.instagram-iframe {
+    width: 100%;
+    max-width: 500px;
+    background:#FFF; 
+    border:0; 
+    border-radius:3px; 
+    box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+    margin: 1px; 
+    padding:0; 
+    width:99.375%; 
+    width:-webkit-calc(100% - 2px); 
+    width:calc(100% - 2px); 
+}
+
+.social-media {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: "Playwrite AU VIC", serif; */
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+
+.social-media > a {
+    color: #000;
+}
+.social-media > a:hover {
+    color: auto;
+    text-decoration: none;
+}
+.fab.fa-instagram {
+    color: #E4405F;
+    /* background-color: #fff; */
+    transition: color 0.2s ease;
+}
+.fab.fa-instagram:hover {
+    color: #C13584; 
+    /* background-color: #fff; */
+}
+
+.fab.fa-google-drive {
+    color: #0F9D58; /* Google Drive Green */
+    transition: color 0.3s ease-in-out;
+}
+  
+.fab.fa-google-drive:hover {
+    color: #4285F4; /* Google Drive Blue on hover */
+}
+
+.fab.fa-facebook {
+    /* font-size: 2rem;  */
+    color: #1877f2; 
+    transition: color 0.2s ease;
+}
+  
+.fab.fa-facebook:hover {
+    color: #3b5998; 
+}

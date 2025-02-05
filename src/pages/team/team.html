@@ -1,0 +1,29 @@
+<div id="dogscbr-team" class="row">
+    {% for person in site.team %}
+    <div class="col-12 col-md-6 staff-container"> <!--Container is empty, just provides spacing and padding -->
+        <div class="row staff-tile d-flex"> <!--Provides the border and is the visible region-->
+            <div class="col-12 col-md-6 pt15 pb15 team-detail"> <!--Text content for team tile-->
+                <p class="team-name">
+                    {{ person.firstname }} {{ person.lastname }}
+                </p>
+                <p class="team-role">
+                    {{ person.role }}
+                </p>
+                <p> {% if person.email!="None" %}     
+                    <a href="mailto:{{ person.email }}@dogscbr.org" class="mail-link">
+                        {{ person.email }}@dogscbr.org
+                    </a> 
+                    {% else %}
+                    <p>
+                        {{ person.firstname }} does not have a Dogs Canbera email, but you can reach out to one of our <a href="{{ site.baseurl }}/contact.html">other email addresses</a>.
+                    </p>
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-12 col-md-6 d-flex team-image"><!--Image content for team tile-->
+                <img src="{{ site.baseurl }}{{ person.img }}" class="gallery-photo">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

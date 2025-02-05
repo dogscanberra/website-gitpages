@@ -1,0 +1,22 @@
+<div id="photo-gallery" class="row">
+    <div class="photo-disclaimer">
+        All images of the public have been taken at Dogs Canberra advertised events.  <br>
+        If you see yourself, and would prefer your image to be obstructed or removed, please contact us at: 
+        <a href="mailto:tobyh@dogscbr.org" class="mail-link">
+            tobyh@dogscbr.org
+        </a>
+        or
+        <a href="mailto:secretary@dogscbr.org" class="mail-link">
+            secretary@dogscbr.org
+        </a>
+    </div>
+    {% for image in site.static_files %}
+    {% if image.path contains 'photo_gallery' %}
+    <div class="col-12 col-sm-4 photo-frame" data-slide-to>
+        <a href="{{ site.baseurl }}{{ image.path }}">
+            <img src="{{ site.baseurl }}{{ image.path }}" class="gallery-photo">
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

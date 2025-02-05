@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include root/head.html %}
+    <body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="0">
+        <div id="royal_preloader"></div>
+        {% include root/navbar.html %}
+        <div class="container">
+            <div class="row">
+                <div class="text-center pb20 w-100">
+                    <h1 class="welcome-title">
+                        {{ page.title }}
+                    </h1>
+                </div>
+            </div><div class="row">
+                <div class="col-12 col-sm-8" style="padding-right:5%">
+                    {{ content }}
+                </div>
+                <div class="col-12 col-sm-4">
+                    <h2 class="page-subtitle">Terms</h2>
+                    Dogs Canberra may update this policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. The updated version will be posted on this page, and the effective date will be indicated.
+                    <br><br>
+                    If you have any questions, concerns, or requests, please contact us at <a href="mailto:{{ page.terms.contact }}" class="mail-link"> {{ page.terms.contact }}</a>
+                    <br><br>
+                    By using our website, you agree to the terms outlined in this privacy policy.
+                    <br><br>
+                    Last updated: <b style="font-weight: 700;">{{ page.terms.revised }}</b>
+                </div>
+            </div>
+        </div>    
+        {% include root/javascript.html %}
+        {% include root/footer.html %}
+    </body>
+</html>

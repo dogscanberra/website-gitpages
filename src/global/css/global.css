@@ -1,5 +1,5 @@
 
-.welcome-title {
+.welcome-title, h1 {
   color: var(--primary);
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
@@ -7,18 +7,35 @@
   font-size: 72px;
 }
 
-.page-subtitle {
-  font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
-  font-weight: 1200;
-  font-size: 36px;
-}
-
-.sub-heading {
+.page-subtitle, h2 {
+  /* font-family: "Merriweather", serif; */
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 36px;
+  margin-top: 1%;
+  color: #000;
+}
+
+.sub-heading, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 24px;
+  margin-top: 1%;
+  color:#000;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 60px;
+  text-align: justify;
+  color: #222;
+  height: 100%;
+  min-height: 100% !important;
 }
 
 hr.dotted {
@@ -28,29 +45,29 @@ hr.dotted {
 /* Headings based on window size */
 
 @media (max-width: 768px) {
-  .welcome-title {
+  .welcome-title, h1 {
     font-size: 2.5rem;
   }
   
-  .page-subtitle {
+  .page-subtitle, h2 {
     font-size: 1.5rem; /* Smaller font size for smaller screens */
   }
 
-  .sub-heading {
+  .sub-heading, h3 {
     font-size: 1.5rem;
   }
 }
 
 /* For screens smaller than 480px (e.g., small mobile screens) */
 @media (max-width: 480px) {
-  .welcome-title {
+  .welcome-title, h1 {
     font-size: 3rem;
   }
-  .page-subtitle {
+  .page-subtitle, h2 {
     font-size: 1.5rem; /* Even smaller font size for very small screens */
   }
   
-  .sub-heading {
+  .sub-heading, h3 {
     font-size: 1.5rem;
   }
 }

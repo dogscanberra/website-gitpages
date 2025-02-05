@@ -39,6 +39,10 @@ collections:
     output: true
   team:
     output: true
+  policies:
+    output: true
+  gallery:
+    output: true
   
 # Exclude from processing.
 # The following items will not be processed, by default.

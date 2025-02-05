@@ -3,7 +3,7 @@ body.royal_preloader {
     visibility: hidden;
 }
 #royal_preloader {
-    font-family: 'Roboto';
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     visibility: visible;
     position: fixed;
@@ -160,9 +160,9 @@ body.royal_preloader {
     margin: 0px;
     color: #072E77;
     text-align: center;
-    font-family: 'Raleway';
-    font-size: 12px;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
 }
 
 /* Progress Mode */

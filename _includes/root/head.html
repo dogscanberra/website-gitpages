@@ -3,7 +3,9 @@
     <meta name="author" content="dogs-canberra" />
     <meta name="description" content="Canberra-based Community Dog Shelter">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if page.header %}: {{ page.header }} {% endif %}</title>
+    <title>
+        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% if page.header %}: {{ page.header }} {% endif %}
+    </title>
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -25,20 +27,18 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link href="{{ site.url }}{{ site.baseurl }}/src/global/css/style.css" rel="stylesheet" title="global-css">
     <link href="{{ site.url }}{{ site.baseurl }}/src/global/css/global.css" rel="stylesheet">
-    <link href="{{ site.url }}{{ site.baseurl }}/src/home/home.css" rel="stylesheet">
-    <link href="{{ site.url }}{{ site.baseurl }}/src/social/social.css" rel="stylesheet">
-    <link href="{{ site.url }}{{ site.baseurl }}/src/contact/contact.css" rel="stylesheet">
-    <link href="{{ site.url }}{{ site.baseurl }}/src/team/team.css" rel="stylesheet">
-    <link href="{{ site.url }}{{ site.baseurl }}/src/gallery/gallery.css" rel="stylesheet">
-    <link href="{{ site.url }}{{ site.baseurl }}/src/getinvolved/membership.css" rel="stylesheet">
-    <!-- Playwrite -->
+
+    <link href="{{ site.url }}{{ site.baseurl }}/src/pages/home/home.css" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/src/pages/social/social.css" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/src/pages/contact/contact.css" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/src/pages/team/team.css" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/src/pages/gallery/gallery.css" rel="stylesheet">
+    <link href="{{ site.url }}{{ site.baseurl }}/src/pages/getinvolved/membership.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap" rel="stylesheet">
-    <!-- Merriweather -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+AU+VIC:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playpen+Sans:wght@100..800&family=Playwrite+AU+VIC:wght@100..400&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 </head>

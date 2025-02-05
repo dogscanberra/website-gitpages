@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="text-center w-100 tag-line">
+        "Improving the lives of shelter dogs, while supporting community mental health!"
+    </div>
+</div>
+
+<div class="row" style="padding-bottom: 5%;">
+    {% include_relative src/pages/home/paws.html %}
+    <div class="col-8 col-sm-8 col-md-10 col-lg-10 order-1" style="align-items: center;">
+        <div id="photobooth" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="row mb20">
+                <div id="mini-gallery" class="carousel-inner">
+                    {% assign image_counter = 0 %}
+                    {% for dog in site.static_files %}
+                    {% if dog.path contains 'assets/photo_gallery' %}
+                    <div class="dog-photo carousel-item {% if image_counter==0 %} active {% endif %}" data-slide-to>
+                        <a href="{{ site.baseurl }}{{ dog.path }}" class="home-photo">
+                            <img src="{{ site.baseurl }}{{ dog.path }}" class="home-photo">
+                        </a>
+                    </div>
+                    {% assign image_counter = image_counter | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row mt30">
+                <div class="carousel-indicators mt10 pt10">
+                    {% assign image_counter = 0 %}
+                    {% for dog in site.static_files %}
+                    {% if dog.path contains 'assets/photo_gallery' %}{% if image_counter < 10 %}
+                    <button type="button" data-bs-target="#photobooth" data-bs-slide-to="{{ image_counter }}" class="{% if image_counter==0 %}active{% endif %} paw-button d-flex align-items-center" aria-current="true" aria-label="Slide {{ image_counter +1}}">
+                        <img src="{{ site.baseurl }}/assets/branding/TransPaw.png" class="paw-button"
+                        data-active-src="{{ site.baseurl }}/assets/branding/ColourPaw.png">
+                    </button>
+                    &nbsp;
+                    {% assign image_counter = image_counter | plus: 1 %}
+                    {% endif %}{% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+                
+        </div>
+        <div class="text-center pt10 w-100 order-last">
+            <h2 class="page-subtitle">Community Run Shelter</h1>
+        </div>
+    </div>
+    <!-- Paws -->
+</div>
