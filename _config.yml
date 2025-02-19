@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Dogs Canberra (DogsCBR) is a registered charity dedicated to improving the quality of life for kennel dogs while enriching public mental health and community well-being. Our kennel-free model offers a safe and nurturing environment where dogs can recover from the stress and trauma of traditional dog shelters.
   By taking in a small number of dogs from other shelters, we focus on building their resilience and temperament through professional assessment and training. Once trained, our dogs are socialised with community members who walk and play with them. This approach not only helps the dogs but also provides individuals who cannot have pets the opportunity to bond with animals, fostering mental health benefits and a sense of connection to their community.
   Through this model, we aim to create lasting relationships between dogs and people, reducing the risk of returns and helping alleviate overcrowding in shelters. Our services and programs are currently being trialled within our Pilot Program.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://dogscanberra.github.io/website-gitpages/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/website-gitpages" # the subpath of your site, e.g. /blog
+url: "https://dogscanberra.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
