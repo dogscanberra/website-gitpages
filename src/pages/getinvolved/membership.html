@@ -2,6 +2,29 @@
     Become a member:
 </h2>
 
+<script>
+    const initialiseModal = () => {
+    // When the user clicks anywhere outside of the modal, close it
+    const modal = document.getElementById("modalDialog");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    const modalClose = document.getElementById("modalClose");
+    modalClose.onclick = () => {
+        modal.style.display = "none";
+    }
+}
+
+const displayModal = (message) => {
+    const modalText = document.getElementById("modalMessage");
+    modalText.innerText = message;
+    const modal = document.getElementById("modalDialog");
+    modal.style.display = "block";
+}
+</script>
+
 <div class="row">
     <!-- Details -->
     <div class="col-12 col-sm-7 text-justify pr30">
@@ -28,4 +51,10 @@
         <button type="button" class="submit-button" onclick="submitData(displayModal);">Submit</button>
     </div>
 
+</div>
+<div id="modalDialog" class="modal">
+    <div class="modal-content">
+        <span id="modalClose" class="close">&times;</span>
+        <p id="modalMessage">Some text in the Modal..</p>
+    </div>
 </div>
