@@ -1,9 +1,9 @@
 <header>
     <!-- Navigation -->
-     <nav class="navbar navbar-light navbar-default fixed-top navbar-expand-lg">
+     <nav class="navbar navbar-light navbar-default fixed-top">
          <a class="navbar-brand {% if page.url == '/' %} scroll-link{% endif %}"
              href="{{ site.baseurl }}/#home" data-id="home">
-             <img src="{{ site.url }}{{ site.baseurl }}/assets/branding/dogs-canberra-logo.jpg" height="39px"
+             <img src="{{ site.url }}{{ site.baseurl }}/assets/branding/dogs-canberra-logo.jpg"
                  class="logo"> </img>
          </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-dcbr" aria-controls="navbar-dcbr" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
         </button>
         
         <div class="collapse navbar-collapse" id="navbar-dcbr">
-            <ul class="navbar-nav ml-auto mt-0 mr-0">
+            <ul class="navbar-nav mt-0">
                 <li class="nav-item"><a href="{{ site.baseurl }}/#home" data-id="home" {% if page.url=="/" %} class="scroll-link" {% endif %}>Home</a> </li>
                 <li class="nav-item"><a href='{{ site.baseurl }}/about.html' data-id="about">About</a> </li>
                 <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs">Help a Dog</a> </li>
