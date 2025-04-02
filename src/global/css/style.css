@@ -44,7 +44,8 @@ Author:Denis Samardjiev
   --primary: #010781;
   --secondary: #6c757d;
   --background: #fff5df;
-  --navbar-colour: #ffb300;
+  --highlight: #ffb300;
+  --navbar-colour: #ffdf9c;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
