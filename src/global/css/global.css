@@ -10,29 +10,31 @@
 .page-subtitle, h2 {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
-  font-weight: normal;
-  font-size: 36px;
+  font-weight: bold;
+  font-size: 24px;
   margin-top: 1%;
-  color: #000;
+  color: var(--primary);
+  padding-bottom: 20px;
 }
 
 .sub-heading, h3 {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 1%;
-  color:#000;
+  color: var(--primary);
+  padding-bottom: 20px;
 }
 
 body {
   background-color: var(--background);
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   padding-top: 120px;
   text-align: justify;
-  color: #222;
+  color:black;
   height: 100%;
   min-height: 100% !important;
 }
@@ -43,17 +45,17 @@ hr.dotted {
 
 /* Headings based on window size */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .welcome-title, h1 {
-    font-size: 2.5rem;
+    font-size: 3.4rem;
   }
   
   .page-subtitle, h2 {
-    font-size: 1.5rem; /* Smaller font size for smaller screens */
+    font-size: 1.3rem; /* Smaller font size for smaller screens */
   }
 
   .sub-heading, h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -63,11 +65,49 @@ hr.dotted {
     font-size: 3rem;
   }
   .page-subtitle, h2 {
-    font-size: 1.5rem; /* Even smaller font size for very small screens */
+    font-size: 1.4rem; /* Even smaller font size for very small screens */
   }
   
   .sub-heading, h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* @media (min-width: 500px) {
+  .container {
+    max-width:fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+} */
+@media (min-width: 670px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 760px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 870px) {
+  .container {
+    max-width: 840px;
+  }
+}
+
+@media (min-width: 990px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
 

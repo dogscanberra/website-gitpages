@@ -276,19 +276,19 @@ a:focus, a:hover {
 /* =Buttons
 -------------------------------------------------------------- */
 .btn {
-  border-radius: 45px;
-    margin-bottom: 1px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  text-transform: none;
     font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 16px;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
-}
-
+}  
+    
 .btn-default {
   color: #fff;
   background-color: transparent;
@@ -328,15 +328,15 @@ a:focus, a:hover {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #8980fe;
-    border-color: #8980fe;
+    color: var(--background);
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-primary:hover {
-    color: #fff;
-    background-color: #615fde;
-    border-color: #615fde;
+    color: var(--primary);
+    background-color: var(--navbar-colour);
+    border-color: var(--primary);
 }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
@@ -1195,6 +1195,13 @@ ul.social-buttons li a:active {
     padding-right: 10px;
     text-align: center;
 }
+
+.cropped-image {
+    width: 300px;     /* Set your desired dimensions */
+    height: 200px;
+    object-fit: cover; /* This preserves aspect ratio */
+    object-position: center; /* Focus on top-left portion */
+  }  
 
 /* Media Queries */
 
