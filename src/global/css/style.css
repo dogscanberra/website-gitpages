@@ -67,7 +67,13 @@ Author:Denis Samardjiev
     border: 0;
 }
 
-
+.container-2 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
@@ -231,6 +237,10 @@ a:focus, a:hover {
 }
 
 .img-responsive { width: 100%; 
+}
+
+.img-fluid-half-page {
+    max-width: 100%;
 }
 
 .breadcrumb-holder {
