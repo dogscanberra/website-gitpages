@@ -1,0 +1,44 @@
+.dog-tile {
+    display: flex;
+    padding: 1% 1%;
+    border: 2px solid var(--primary);
+    background-color: var(--highlight);
+    border-radius: 15px;
+}
+
+.dog-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    border-radius: 10%;
+    transition: all .2s;
+}
+
+.dog-photo:hover {
+    transform: scale(1.1);
+    border-radius: 0;
+}
+
+.btn-paw {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.btn-paw img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.divider {
+    height: 3px;
+    background-color: var(--navbar-colour); /* Bootstrap's light gray */
+    width: 100%;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }

@@ -3,4 +3,6 @@ name: Nymeria
 role: Therapy Dog
 img: assets/dog_photos/Nymeria_02.jpg
 ---
-Nymeria is our first recognised therapy dog!  An absolutely gorgeous girl with the most patient and empathetic temperament, we couldn't be more fortunate to have her along with us as an ambassador for Dogs Canberra
+Hi! I’m Nymeria, and I’m a tubby-rub addict. I am honoured to be Dogs Canberra’s Ambassador spreading positivity and joy around Canberra! You might spot me around the local hospitals, libraries, schools, and universities seeking pats and spreading joy. 
+
+Us Border Collies are known for being obedient, well-behaved and loving. I love my four cat siblings and every human and dog I meet.

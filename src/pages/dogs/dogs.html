@@ -1,20 +1,66 @@
+<div class="row">
+    <div class="text-center w-100">
+        <a class="btn-paw align-items-center" data-bs-toggle="collapse" href="#walk-a-dog" role="button" aria-expanded="false" aria-controls="walk-a-dog">
+            <span class="page-subtitle mb-0">Walk a Dog</span>
+            <img src="assets\branding\ColourPaw.png" class="ml-2">
+        </a>        
+    </div>
+</div>
+<div class="collapse" id="walk-a-dog">
+  <div>
+    To walk our dogs, you will need to become a Dogs Canberra member. This involves reading our guidelines and policies, and passing a short test.
+    <br><br>
+    After becoming a member, you will be given a member ID number, which can be used to access our dog walking service here. 
+  </div>
+</div>
+<div class="divider my-4"></div>
+<div class="row">
+    <div class="text-center w-100">
+        <a class="btn-paw align-items-center" data-bs-toggle="collapse" href="#foster-a-dog" role="button" aria-expanded="false" aria-controls="foster-a-dog">
+            <span class="page-subtitle mb-0">Foster a Dog</span>
+            <img src="assets\branding\ColourPaw.png" class="ml-2">
+        </a>        
+    </div>
+</div>
+<div class="collapse" id="foster-a-dog">
+  <div>
+    We are strong believers in community and support our foster carers by assisting with set up costs and providing ongoing training and support. If you would to join our network of foster carers, please fill out the Google Form below.
+  </div>
+</div>
+<div class="divider my-4"></div>
+<div class="row">
+    <div class="text-center w-100">
+        <a class="btn-paw align-items-center" data-bs-toggle="collapse" href="#adopt-a-dog" role="button" aria-expanded="false" aria-controls="adopt-a-dog">
+            <span class="page-subtitle mb-0">Adopt a Dog</span>
+            <img src="assets\branding\ColourPaw.png" class="ml-2">
+        </a>        
+    </div>
+</div>
+<div class="collapse" id="adopt-a-dog">
+  <div>
+    If you are interested in adopting any of our dogs, please get in contact via our general@dogscbr.org.au email and we will set up a time to meet!
+  </div>
+</div>
+<div class="divider my-4"></div>
 <div id="dogscbr-team" class="row">
     {% for dog in site.dogs %}
-    <div class="col-12 col-md-12 staff-tile mb10 pb10 pt10">
+    <div class="col-12 col-md-12 mb10 pb10 pt10">
         <div class="row">
-            <div class="col-12 col-md-9 pt15 pb15 team-detail">
-                <p class="team-name">
-                    {{ dog.name }}
-                </p>
-                <p class="team-role">
-                    {{ dog.role }}
-                </p>
-                <p> {{ dog.content | markdownify }} </p>
+            <div class="col-md-3 d-flex">
+                <img src="{{ dog.img }}" class="dog-photo">
             </div>
-            <div class="col-12 col-md-3 order-3 d-flex team-image">
-                <a href="{{ site.baseurl }}{{ dog.img }}">
-                    <img src="{{ dog.img }}" class="gallery-photo">
-                </a>
+            <div class="col-md-9 pt15 pb15 dog-tile">
+                <div class="ml-2">
+                    <div class="team-name">
+                        {{ dog.name }}
+                    </div>
+                    <div class="team-role d-inline-block no-wrap">
+                        {{ dog.role }}
+                    </div>    
+                </div>
+                <div class="mx-4"> 
+                    {{ dog.content | markdownify }}
+                </div>
             </div>
         </div>
     </div>
