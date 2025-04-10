@@ -44,31 +44,31 @@
 <div class="divider my-4"></div>
 <div class="row text-center d-flex">
     <div class="col icon">
-        <img src="assets\icons\walk symbol.png">
+        <img src="assets\icons\walk.png">
         <div>
             Walk Me
         </div>
     </div>
     <div class="col icon">
-        <img src="assets\icons\Foster symbol.png">
+        <img src="assets\icons\foster.png">
         <div>
             Foster Me
         </div>
     </div>
     <div class="col icon">
-        <img src="assets\icons\Adopt symbol.png">
+        <img src="assets\icons\adopt.png">
         <div>
             Adopt Me
         </div>
     </div>
     <div class="col icon">
-        <img src="assets\icons\Outreach dog.png">
+        <img src="assets\icons\outreach.png">
         <div>
             Outreach Dog
         </div>
     </div>
     <div class="col icon">
-        <img src="assets\icons\Therapy dog.png">
+        <img src="assets\icons\therapy.png">
         <div>
             Therapy Dog
         </div>
@@ -92,6 +92,10 @@
                     </div>    
                     <div class="mt20">
                         {{ dog.content | markdownify }}
+                    </div>
+                    <div class="mt20 icon">
+                        <img src="assets\icons\{{dog.tags}}.png">
+                        <img src="assets\icons\{{dog.tag2}}.png">
                     </div>
                 </div>
             </div>
