@@ -412,9 +412,11 @@ a:focus, a:hover {
     bottom:0;
     left:0;
     width:100%;
-    font-family: Helvetica;
+    font-family: 'Montserrat';
     font-size: 12px;
     text-align: center;
+    background-color: var(--navbar-colour);
+    padding-top: 10px;
   }
   
   .theme-title {
