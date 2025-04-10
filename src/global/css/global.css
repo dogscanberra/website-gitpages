@@ -1,9 +1,9 @@
 
 .welcome-title, h1 {
   color: var(--primary);
-  font-family: "Merriweather", serif;
+  font-family: "Inria-Serif";
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 72px;
 }
 
@@ -44,7 +44,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   padding-top: 120px;
-  text-align: justify;
+  text-align: left;
   color:black;
   height: 100%;
   min-height: 100% !important;

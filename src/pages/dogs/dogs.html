@@ -42,14 +42,47 @@
   </div>
 </div>
 <div class="divider my-4"></div>
-<div id="dogscbr-team" class="row">
+<div class="row text-center d-flex">
+    <div class="col icon">
+        <img src="assets\icons\walk symbol.png">
+        <div>
+            Walk Me
+        </div>
+    </div>
+    <div class="col icon">
+        <img src="assets\icons\Foster symbol.png">
+        <div>
+            Foster Me
+        </div>
+    </div>
+    <div class="col icon">
+        <img src="assets\icons\Adopt symbol.png">
+        <div>
+            Adopt Me
+        </div>
+    </div>
+    <div class="col icon">
+        <img src="assets\icons\Outreach dog.png">
+        <div>
+            Outreach Dog
+        </div>
+    </div>
+    <div class="col icon">
+        <img src="assets\icons\Therapy dog.png">
+        <div>
+            Therapy Dog
+        </div>
+    </div>
+
+</div>
+<div id="dogscbr-team" class="col">
     {% for dog in site.dogs %}
-    <div class="col-12 col-md-12 mb10 pb10 pt10">
+    <div class="col mb10 pb10 pt10">
         <div class="row">
-            <div class="col-md-3 d-flex">
+            <div class="col-12 col-md-6">
                 <img src="{{ dog.img }}" class="dog-photo">
             </div>
-            <div class="col-md-9 pt15 pb15 dog-tile">
+            <div class="col-12 col-md-6 dog-tile">
                 <div class="ml-2">
                     <div class="team-name">
                         {{ dog.name }}
@@ -57,9 +90,9 @@
                     <div class="team-role d-inline-block no-wrap">
                         {{ dog.role }}
                     </div>    
-                </div>
-                <div class="mx-4"> 
-                    {{ dog.content | markdownify }}
+                    <div class="mt20">
+                        {{ dog.content | markdownify }}
+                    </div>
                 </div>
             </div>
         </div>
