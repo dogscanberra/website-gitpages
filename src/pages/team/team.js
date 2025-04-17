@@ -1,4 +1,4 @@
-window.addEventListener("load", teamScramble, true);
+/*window.addEventListener("load", teamScramble, true);
 function teamScramble() {
     // Get team element and team members contained within it:
     var team = document.getElementById("dogscbr-team");
@@ -27,4 +27,4 @@ function teamScramble() {
             idx +=1;
         })
     }
-}
+}*/

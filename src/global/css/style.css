@@ -416,7 +416,11 @@ a:focus, a:hover {
     font-size: 12px;
     text-align: center;
     background-color: var(--navbar-colour);
-    padding-top: 10px;
+    padding-top: 6px;
+  }
+
+  .footer a:hover { /*gets rid of small black line in footer when hovering*/
+    text-decoration: none;
   }
   
   .theme-title {

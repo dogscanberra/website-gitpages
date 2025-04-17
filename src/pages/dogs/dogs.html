@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row my-2">
     <div class="text-center w-100">
-        <a class="btn-paw align-items-center" data-bs-toggle="collapse" href="#walk-a-dog" role="button" aria-expanded="false" aria-controls="walk-a-dog">
+        <a class="btn-paw align-items-center" data-bs-toggle="collapse" data-bs-target="#walk-a-dog" role="button" aria-expanded="false" aria-controls="walk-a-dog">
             <span class="page-subtitle mb-0">Walk a Dog</span>
             <img src="assets\branding\ColourPaw.png" class="ml-2">
         </a>        
@@ -15,10 +15,10 @@
     Once signed and returned to us, we will approve you as a Community Member and give you a member ID which you can use to access our <a href="https://forms.gle/r9XxRfz9xc6QUcJM8" target="_blank">dog walking service</a>! 
   </div>
 </div>
-<div class="divider my-4"></div>
-<div class="row">
+<div class="divider my-3"></div>
+<div class="row my-2">
     <div class="text-center w-100">
-        <a class="btn-paw align-items-center" data-bs-toggle="collapse" href="#foster-a-dog" role="button" aria-expanded="false" aria-controls="foster-a-dog">
+        <a class="btn-paw align-items-center" data-bs-toggle="collapse" data-bs-target="#foster-a-dog" role="button" aria-expanded="false" aria-controls="foster-a-dog">
             <span class="page-subtitle mb-0">Foster a Dog</span>
             <img src="assets\branding\ColourPaw.png" class="ml-2">
         </a>        
@@ -30,10 +30,10 @@
     If you are interested in joining our network of foster carers, please fill out our <a href="https://forms.gle/8Wgqcwv9EFuUzkQm6" target="_blank">Foster Program Expression of Interest Form</a>.
   </div>
 </div>
-<div class="divider my-4"></div>
-<div class="row">
+<div class="divider my-3"></div>
+<div class="row my-2">
     <div class="text-center w-100">
-        <a class="btn-paw align-items-center" data-bs-toggle="collapse" href="#adopt-a-dog" role="button" aria-expanded="false" aria-controls="adopt-a-dog">
+        <a class="btn-paw align-items-center" data-bs-toggle="collapse" data-bs-target="#adopt-a-dog" role="button" aria-expanded="false" aria-controls="adopt-a-dog">
             <span class="page-subtitle mb-0">Adopt a Dog</span>
             <img src="assets\branding\ColourPaw.png" class="ml-2">
         </a>        
@@ -44,7 +44,30 @@
     If you are interested in adopting any of our dogs, please get in contact via our <a href=mailto:"general@dogscbr.org">general email</a> and we will set up a time to meet!
   </div>
 </div>
-<div class="divider my-4"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash;
+  
+      if (hash) {
+        const collapseElement = document.querySelector(hash);
+        const toggleButton = document.querySelector(`[data-bs-toggle="collapse"][data-bs-target="${hash}"]`);
+  
+        if (collapseElement) {
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseElement);
+          bsCollapse.show();
+  
+          // ✅ Update the aria-expanded attribute manually
+          if (toggleButton) {
+            toggleButton.setAttribute("aria-expanded", "true");
+          }
+          history.replaceState(null, null, ' ');
+        }
+      }
+    });
+</script>
+  
+<div class="divider my-3"></div>
 <div class="row text-center d-flex">
     <div class="col icon">
         <img src="assets\icons\walk.png">

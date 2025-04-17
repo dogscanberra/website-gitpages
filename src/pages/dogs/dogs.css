@@ -1,3 +1,14 @@
+.arrow {
+    border: solid var(--primary);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);  
+  }
+
+
+
 .dog-tile {
     display: flex;
     padding: 1% 1%;
@@ -31,12 +42,13 @@
     background: none;
     border: none;
     padding: 0;
+    cursor: pointer;
 }
 
 .btn-paw img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0 0 10px 10px;
     transition: transform 0.2s ease;
 }
 
