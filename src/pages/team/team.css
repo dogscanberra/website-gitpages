@@ -36,9 +36,6 @@
 }
 
 .team-photo {
-    -webkit-box-ordinal-group: inherit;
-    -ms-flex-order: inherit;
-    order: inherit;
     padding-left:0;
     padding-right: 0;
 }
@@ -50,12 +47,6 @@
     object-fit: cover;
     border: 0px solid var(--primary);
     border-radius: 10%;
-}
-
-.staff-tile {
-    -webkit-box-ordinal-group: inherit;
-    -ms-flex-order: inherit;
-    order: inherit;
 }
 
 .team-detail {

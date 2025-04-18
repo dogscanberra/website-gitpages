@@ -7,8 +7,6 @@
     -webkit-transform: rotate(45deg);  
   }
 
-
-
 .dog-tile {
     display: flex;
     padding: 1% 1%;
@@ -23,11 +21,12 @@
     object-fit: cover;
     border-radius: 10%;
     transition: all .2s;
+    margin-bottom:10px;
 }
 
-.dog-photo:hover {
+/* .dog-photo:hover {
     transform: scale(1.05);
-}
+} */
 
 .icon {
     min-width: fit-content;
