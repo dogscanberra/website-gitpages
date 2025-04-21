@@ -14,7 +14,7 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 26px;
 }
 .team-role {
     font-family: 'Montserrat', sans-serif;
@@ -22,22 +22,62 @@
     font-weight: 200;
     font-size: 18px;
 }
-
-.staff-tile {
-    -webkit-box-ordinal-group: inherit;
-    -ms-flex-order: inherit;
-    order: inherit;
+.team-email {
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* or whatever fits your layout */
+    display: inline-block;
+  
 }
-.team-image {
-    -webkit-box-ordinal-group: inherit;
-    -ms-flex-order: inherit;
-    order: inherit;
+
+.team-photo {
+    padding-left:0;
+    padding-right: 0;
+}
+
+.team-photo img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    object-fit: cover;
+    border: 0px solid var(--primary);
+    border-radius: 10%;
 }
 
 .team-detail {
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
+}
+
+@media (min-width: 768px) {
+    .team-name {
+        font-size: 18px;
+    }
+    .team-role {
+        font-size: 15px;
+    }
+    .team-email {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .team-name {
+        font-size: 26px;
+    }
+    .team-role {
+        font-size: 18px;
+    }
+    .team-email {
+        font-size: 16px;
+    }
+
 }
 /* 
 .team-detail:nth-child(4n){

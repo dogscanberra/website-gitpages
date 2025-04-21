@@ -43,7 +43,10 @@ Author:Denis Samardjiev
 :root {
   --primary: #010781;
   --secondary: #6c757d;
-  --background: #fee09a;
+  --tertiary: #E2D8C4;
+  --background: #fff5df;
+  --highlight: #ffb300;
+  --navbar-colour: #ffdf9c;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -65,7 +68,6 @@ Author:Denis Samardjiev
     border: 0;
 }
 
-
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
@@ -77,6 +79,7 @@ body {
   text-align: justify;
   color: #000;
   height: 100%;
+  padding-top: 140px;
   min-height: 100% !important;
 }
 
@@ -227,7 +230,8 @@ a:focus, a:hover {
     font-size: 26px;
 }
 
-.img-responsive { width: 100%; }
+.img-responsive { width: 100%; 
+}
 
 .breadcrumb-holder {
     padding: 12px 17px 12px 0;
@@ -273,19 +277,23 @@ a:focus, a:hover {
 /* =Buttons
 -------------------------------------------------------------- */
 .btn {
-  border-radius: 45px;
-    margin-bottom: 1px;
+  border-radius: 2px;
+  width:200px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 10px;
+    font-weight: 200;
+    font-size: 16px;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
-}
-
+}  
+    
 .btn-default {
   color: #fff;
   background-color: transparent;
@@ -293,15 +301,15 @@ a:focus, a:hover {
 }
 
 .btn-default:hover {
-    color: #fff;
-    background-color: #8980fe;
-    border-color: #8980fe;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
-    color: #fff;
-    background-color: #8980fe;
-    border-color: #8980fe;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
@@ -309,15 +317,15 @@ a:focus, a:hover {
 }
 
 .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-    color: #fff;
-    background-color: #8980fe;
-    border-color: #8980fe;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-default.disabled.focus, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled].focus, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
-    color: #fff;
-    background-color: #8980fe;
-    border-color: #8980fe;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-default.disabled.focus, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled].focus, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover {
@@ -325,27 +333,27 @@ a:focus, a:hover {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #8980fe;
-    border-color: #8980fe;
+    color: var(--background);
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-primary:hover {
-    color: #fff;
-    background-color: #615fde;
-    border-color: #615fde;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
-    color: #fff;
-    background-color: #615fde;
-    border-color: #615fde;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-primary.focus, .btn-primary:focus {
-    color: #fff;
-    background-color: #504ED2;
-    border-color: #504ED2;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
@@ -353,19 +361,25 @@ a:focus, a:hover {
 }
 
 .btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
-    color: #fff;
-    background-color: #615fde;
-    border-color: #615fde;
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
+}
+
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
     color: #fff;
-    background-color: #615fde;
-    border-color: #615fde;
 }
 
-.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
-    color: #fff;
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: var(--primary);
+    background-color: var(--highlight);
+    border-color: var(--primary);
 }
 
 .btn-white {
@@ -399,9 +413,15 @@ a:focus, a:hover {
     bottom:0;
     left:0;
     width:100%;
-    font-family: Helvetica;
+    font-family: 'Montserrat';
     font-size: 12px;
     text-align: center;
+    background-color: var(--navbar-colour);
+    padding-top: 6px;
+  }
+
+  .footer a:hover { /*gets rid of small black line in footer when hovering*/
+    text-decoration: none;
   }
   
   .theme-title {
@@ -1130,9 +1150,20 @@ ul.social-buttons li a:active {
     -webkit-filter: scale(120%);
     filter: scale(120%);
 }
+.navbar {
+    justify-content: center;
+}
+
+.navbar-brand img.logo {
+  max-height: 80px; 
+  width: auto; 
+  height: auto;
+}
 
 .navbar-brand {
-  height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 .navbar-default {
@@ -1140,17 +1171,15 @@ ul.social-buttons li a:active {
   margin-top: 0;
   align-items: center;
   font-family: "Montserrat",sans-serif;
-  font-size:  12px;
-  background: var(--background) none repeat scroll 0% 0%;
-  text-transform: uppercase;
-  padding-top: 0;
+  font-size:  20px;
+  background: var(--navbar-colour) none repeat scroll 0% 0%;
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #222;
   line-height:    3.3;
   font-weight:    400;
-  margin-right: 15px;
+  margin:0;
 }
 
 .navbar-default .navbar-nav >li > a:focus, .navbar-default .navbar-nav > li > a:hover {
@@ -1166,9 +1195,37 @@ ul.social-buttons li a:active {
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #333;
+    min-width: max-content;
+    max-width:80%;
+    margin: auto;
+    justify-content: center;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    display:block !important;
+}
+
+.nav-item {
+    min-width: 10vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
 }
 
 /* Media Queries */
+
+@media (min-width: 740px) {
+    .navbar-collapse {
+      display: flex !important;
+    }
+    .navbar-toggler {
+      display: none !important;
+    }
+    .navbar-nav {
+      flex-direction: row !important;
+    }
+  }
 
 @media (min-width: 768px) {
     .timeline:before { left:50% }

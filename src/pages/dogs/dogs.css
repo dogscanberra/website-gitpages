@@ -1,0 +1,73 @@
+.arrow {
+    border: solid var(--primary);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);  
+  }
+
+.dog-tile {
+    display: flex;
+    padding: 1% 1%;
+    border: 2px solid var(--primary);
+    background-color: var(--highlight);
+    border-radius: 15px;
+}
+
+.dog-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: all .2s;
+    margin-bottom:10px;
+}
+
+/* .dog-photo:hover {
+    transform: scale(1.05);
+} */
+
+.icon {
+    min-width: fit-content;
+}
+
+.icon img{
+    width: 50px;
+    height: 50px;
+}
+
+.btn-paw {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-paw img {
+    width: 40px;
+    height: 40px;
+    padding: 0 0 10px 10px;
+    transition: transform 0.2s ease;
+}
+
+.divider {
+    height: 3px;
+    background-color: var(--navbar-colour);
+    width: 100%;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  @media (min-width: 870px) {
+    .dog-tile {
+        font-size: 12px;
+    }
+  }
+  @media (min-width: 992px) {
+    .dog-tile {
+        font-size: 16px;
+    }
+  }
