@@ -1,5 +1,4 @@
 .staff-container {
-    display: flex;
     padding: 2% 2%;
 }
 
@@ -42,8 +41,8 @@
 
 .team-photo img {
     height: 100%;
-    aspect-ratio: 1/1;
-    max-width: 100%;
+    aspect-ratio: 1/1 !important;
+    width: 100%;
     object-fit: cover;
     border: 0px solid var(--primary);
     border-radius: 10%;
@@ -57,7 +56,7 @@
 
 @media (min-width: 768px) {
     .team-name {
-        font-size: 18px;
+        font-size: 17px;
     }
     .team-role {
         font-size: 15px;

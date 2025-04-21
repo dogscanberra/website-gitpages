@@ -1,7 +1,7 @@
 ---
 firstname: Mat
 lastname: Banister
-role: Acting Secretary
+role: Secretary
 email: secretary@dogscbr.org
 img: team/mat.jpg
 ---
