@@ -1,7 +1,7 @@
 ---
 firstname: Mownica
 lastname: Parthiban
-role: Engagement Officer
+role: Engagement
 email: mownicap@dogscbr.onmicrosoft.com
 img: team/mownica.jpg
 ---

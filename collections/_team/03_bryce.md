@@ -1,7 +1,7 @@
 ---
 firstname: Bryce 
 lastname: Taylor
-role: Acting Director
+role: Director
 email: brycet@dogscbr.org
 img: team/bryce.jpg
 ---
