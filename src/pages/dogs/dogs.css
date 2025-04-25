@@ -10,16 +10,15 @@
 .dog-tile {
     display: flex;
     padding: 1% 1%;
-    border: 2px solid var(--primary);
     background-color: var(--highlight);
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .dog-photo {
     width: 100%;
     aspect-ratio: 1 / 1 !important;
     object-fit: cover;
-    border-radius: 10%;
+    border-radius: 20px;
     transition: all .2s;
     margin-bottom:10px;
 }
