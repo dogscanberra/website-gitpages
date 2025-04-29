@@ -12,7 +12,7 @@
     
     To do so, please fill out our <a href="https://forms.gle/5jmFesADABSEAyBF7" target="_blank">Community Member Expression of Interest Form</a> and we will email you our Dogs Canberra OHS Guidelines, Dog Walking Manual and Community Members Induction. 
     <br><br>
-    Once signed and returned to us, we will approve you as a Community Member and give you a member ID which you can use to access our <a href="https://forms.gle/r9XxRfz9xc6QUcJM8" target="_blank">dog walking service</a>! 
+    Once signed and returned to us, we will approve you as a Community Member and give you a member ID which you can use to access our dog walking service<!--a href="https://forms.gle/r9XxRfz9xc6QUcJM8" target="_blank">dog walking service</a-->!
   </div>
 </div>
 <div class="divider my-3"></div>
@@ -122,6 +122,9 @@
                     <div class="mt20 icon">
                         <img src="assets\icons\{{dog.tags}}.png">
                         <img src="assets\icons\{{dog.tag2}}.png">
+                        {% if dog.walk %}
+                        <a href='{{ dog.walk-url }}' target="_blank" class="btn btn-primary">Walk Me!</a>  
+                        {% endif %}              
                     </div>
                 </div>
             </div>

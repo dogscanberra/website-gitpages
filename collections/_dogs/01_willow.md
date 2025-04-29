@@ -4,6 +4,8 @@ role: Looking for a home!
 img: assets/dog_photos/Willow_01.jpg
 tags: foster
 tag2: empty
+walk: false
+
 ---
 Hi, I’m Willow! I’m a Kelpie x Cattle Dog mix bursting with energy and always ready to join in on the fun. Whether it’s a walk, a game, or a cuddle, I love being part of the action.
 

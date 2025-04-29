@@ -4,6 +4,8 @@ role: Outreach Dog
 img: assets/dog_photos/Tofu_icons.jpg
 tags: outreach
 tag2: empty
+walk: false
+
 ---
 Hey there! I'm Tofu and I'm an Outreach Dog for Dogs Canberra. I love attending events where I can bring smiles to peoples faces, especially if there's food involved! 
 
