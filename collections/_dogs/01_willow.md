@@ -3,7 +3,7 @@ name: Willow
 role: Looking for a home!
 img: assets/dog_photos/Willow_01.jpg
 tags: foster
-tag2: empty
+tag2: adopt
 walk: false
 
 ---
