@@ -1,5 +1,7 @@
 .staff-container {
     padding: 2% 2%;
+    /* background-color: var(--tertiary);
+    border-radius: 20px; */
 }
 
 .staff-tile {

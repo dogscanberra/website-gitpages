@@ -12,14 +12,14 @@
         
         <div class="collapse navbar-collapse" id="navbar-dcbr">
             <ul class="navbar-nav mt-0">
-                <li class="nav-item"><a href="{{ site.baseurl }}/#home" data-id="home" {% if page.url=="/" %} class="scroll-link" {% endif %}>Home</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/about.html' data-id="about">About</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs">Help a Dog</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/team.html' data-id="team">Team</a> </li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/#home" data-id="home" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Home</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/about.html' data-id="about" class="{% if page.url=='/about.html' %} font-weight-bold {% endif %}">About</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs" class="{% if page.url=='/dogs.html' %} font-weight-bold {% endif %}">Help a Dog</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/team.html' data-id="team" class="{% if page.url=='/team.html' %} font-weight-bold {% endif %}">Team</a> </li>
                 <!--li class="nav-item"><a href='{{ site.baseurl }}/social.html' data-id="social">Media</a> </li-->
                 <!--li class="nav-item"><a href='{{ site.baseurl }}/gallery.html' data-id="gallery">Gallery</a> </li-->
-                <li class="nav-item"><a href="{{ site.baseurl }}/contact.html" data-id="contact">Contact</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/support.html' data-id="getinvolved">Donate</a> </li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/contact.html" data-id="contact" class="{% if page.url=='/contact.html' %} font-weight-bold {% endif %}">Contact</a> </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/support.html' data-id="getinvolved" class="{% if page.url=='/support.html' %} font-weight-bold {% endif %}">Donate</a> </li>
             </ul>
         </div>
      </nav>
