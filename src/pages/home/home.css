@@ -22,23 +22,10 @@
   display: flex;
   padding: 3vw;
   margin: 0 2px;
-  border-radius: 20px;
+  border-radius: 30px;
   flex-direction: column;
   background-color: var(--tertiary);
   justify-content: center !important;
-}
-
-.home-photo {
-  order:1;
-}
-
-.home-photo img {
-  width:100%;
-  aspect-ratio: 1/1 !important;
-  object-fit: cover;
-  border: 0px solid var(--primary);
-  border-radius: 10%;
-  margin-bottom: 30px;
 }
 
 .home-content {
@@ -85,6 +72,7 @@ button.paw-button {
   width:100%;
   height:400px;
   flex-grow: 1;
+  z-index: -1;
 }
 
 .hpi-1 {
@@ -203,61 +191,67 @@ button.paw-button.active > img.paw-button {
 }
 
 /* photobooth */
+
+.home-photo {
+  order:1;
+}
+
+.home-photo img {
+  width:100%;
+  aspect-ratio: 1/1 !important;
+  object-fit: cover;
+  border: 0px solid var(--primary);
+  border-radius: 10%;
+  margin-bottom: 30px;
+}
+
 .home-photo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100%; 
   width: 100%;
   object-fit: cover;
   border: 0px solid var(--primary);
   /* border-radius: 10%; */
-  transition: all .2s;
+  /* transition: all .2s; */
 }
 
 /* carousel */
 .carousel {
     padding-bottom: 20px;
     flex-grow: 1;
+    padding-left: 0;
+    padding-right: 0;
   }
   
 .carousel-inner {
   position: relative;
   width: 100%;
   height: 50vh;
+  padding:0;
   overflow: hidden;
 }
 
 .carousel-item {
-  position: relative;
   display: none;
-  opacity: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
   height: 50vh;
-  transition: -webkit-transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: opacity 0.9s ease-in-out;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-}
-
-.carousel-item-start {
-  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
   display: flex;
-  opacity: 1;
-  justify-content: center;
-  align-items: center;
 }
+
+/* .carousel-item-start {
+  visibility: hidden;
+} */
 
 .carousel-item-next,
 .carousel-item-prev {
@@ -265,11 +259,11 @@ button.paw-button.active > img.paw-button {
   top: 0;
 }
 
-.carousel-item-next.carousel-item-left,
+/* .carousel-item-next.carousel-item-left,
 .carousel-item-prev.carousel-item-right {
   -webkit-transform: translateX(0);
   transform: translateX(0);
-}
+} */
   
 @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
   .carousel-item-next.carousel-item-left,
@@ -374,8 +368,8 @@ button.paw-button.active > img.paw-button {
     -ms-flex-pack: center;
     justify-content: center;
     padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: 0;
+    margin-left: 0;
     list-style: none;
   }
   
@@ -416,6 +410,11 @@ button.paw-button.active > img.paw-button {
     background: transparent;
   }
   
+.carousel-indicators button {
+    background-color: transparent !important;
+    border: none;
+}
+
 .carousel-caption {
     position: absolute;
     right: 15%;

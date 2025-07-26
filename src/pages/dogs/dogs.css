@@ -1,39 +1,13 @@
+/* Drop down menus */
+
 .arrow {
-    border: solid var(--primary);
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 5px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);  
-  }
-
-.dog-tile {
-    display: flex;
-    padding: 1% 1%;
-    background-color: var(--highlight);
-    border-radius: 20px;
-}
-
-.dog-photo {
-    width: 100%;
-    aspect-ratio: 1 / 1 !important;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: all .2s;
-    margin-bottom:10px;
-}
-
-/* .dog-photo:hover {
-    transform: scale(1.05);
-} */
-
-.icon {
-    min-width: fit-content;
-}
-
-.icon img{
-    width: 50px;
-    height: 50px;
+  border: solid var(--primary);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);  
+  margin:0 0 5px 10px;
 }
 
 .btn-paw {
@@ -54,19 +28,192 @@
     height: 3px;
     background-color: var(--navbar-colour);
     width: 100%;
-  }
+}
 
-  .no-wrap {
-    white-space: nowrap;
-  }
+/* Glossary box */
 
-  @media (min-width: 870px) {
-    .dog-tile {
-        font-size: 12px;
-    }
+.glossary-box {
+    background-color: var(--navbar-colour);
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 10px;
+    font-size:20px;
+}
+
+.icon {
+    min-width: fit-content;
+    font-size:16px;
+    padding: 0 6px;
+}
+
+.icon img{
+    width: 50px;
+    height: 50px;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: white;
+  border-color: var(--navbar-colour);
+  color: black;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 100;
+  bottom: 125%; /* show top the logo */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.logo-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Dog Tile: photo, details, etc. */
+
+.dog-tile {
+    display: flex;
+    background-color: var(--lighter);
+    border-radius: 20px;
+    margin: 0;
+    font-size: 10px;
+    /* border: 2px solid var(--secondary); */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dog-photo {
+    width: 100%;
+    height:350px;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin:0;
+    padding:0;
+}
+
+.dog-photo-wrapper {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.hover-expand-dog-photo {
+  transition: width 0.4s ease, z-index 0s;
+  position: relative;
+  z-index: 1;
+}
+
+.dog-photo-wrapper:hover .hover-expand-dog-photo {
+  width: 125%;
+  z-index: 10;
+}
+
+/* .dog-photo:hover {
+    transform: scale(1.05);
+} */
+
+.dog-name {
+  font-size: 18px;
+}
+
+.icon-small {
+  max-width: 40px;
+}
+
+.icon-small img{
+  width: 30px;
+  height: 30px;
+}
+
+.faded {
+  opacity:0.3;
+}
+
+.info-box {
+  border: 2px solid var(--highlight);
+
+  margin: 5px;
+  padding: 5px;
+  min-width:fit-content;
+}
+
+.dog-btn {
+  font-size:14px;
+}
+
+
+/* .no-wrap { 
+  white-space: nowrap;
+} */
+
+@media (min-width: 700px) {
+  .dog-tile {
+      font-size: 11px;
   }
-  @media (min-width: 992px) {
-    .dog-tile {
-        font-size: 16px;
-    }
+  .dog-name {
+  font-size: 20px;
+  } 
+}
+@media (min-width: 870px) {
+  .dog-tile {
+      font-size: 12px;
   }
+  .dog-name {
+  font-size: 22px;
+  } 
+}
+@media (min-width: 992px) {
+  .dog-tile {
+      font-size: 14px;
+  }
+  .dog-name {
+  font-size: 26px;
+  }
+}
+
+/* Mobile-specific style (screens smaller than 768px) */
+@media (max-width: 767.98px) {
+  .dog-tile  {
+    /* margin: 0 12px; */
+    width: fit-content;
+  }
+  .icon img{
+    width: 25px;
+    height: 25px;
+  }
+  .icon {
+    font-size: 10px;
+  }
+  .icon-small {
+  max-width: 30px;
+  } 
+  .icon-small img{
+    width: 20px;
+    height: 20px;
+  }
+  .glossary-box {
+    font-size: 14px;
+  }
+  .dog-btn {
+    font-size:12px;
+    width:fit-content;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .dog-photo {
+    margin-right:0;
+  }
+}

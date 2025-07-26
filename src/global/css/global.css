@@ -14,7 +14,7 @@
   font-size: 24px;
   margin-top: 1%;
   color: var(--primary);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .sub-heading, h3 {
@@ -41,9 +41,9 @@
 body {
   background-color: var(--background);
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  /* font-size: 16px; */
   font-weight: 300;
-  padding-top: 120px;
+  padding-top: 90px;
   text-align: left;
   color:black;
   height: 100%;
@@ -57,19 +57,21 @@ hr.dotted {
 
 /* Headings based on window size */
 
+
 @media (max-width: 870px) {
   .welcome-title, h1 {
     font-size: 4rem;
   }
   
   .page-subtitle, h2 {
-    font-size: 1.3rem; /* Smaller font size for smaller screens */
+    font-size: 1.3rem;
   }
 
   .sub-heading, h3 {
     font-size: 1.1rem;
   }
-}
+} 
+
 
 /* For screens smaller than 480px (e.g., small mobile screens) */
 @media (max-width: 580px) {
@@ -77,7 +79,7 @@ hr.dotted {
     font-size: 3rem;
   }
   .page-subtitle, h2 {
-    font-size: 1.2rem; /* Even smaller font size for very small screens */
+    font-size: 1.2rem;
   }
   
   .sub-heading, h3 {

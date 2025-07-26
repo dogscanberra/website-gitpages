@@ -9,7 +9,10 @@
 .img-fluid-half-page {
     max-width: 100%;
     border-radius: 20px;
+}
 
+.home-btn {
+  font-size:14px;
 }
 
 @media (min-width: 576px) {
@@ -53,8 +56,6 @@
 .home-panel-img {
   height:570px;
 }
-
-
 }
 
 @media (min-width: 760px) {
@@ -73,8 +74,6 @@
 .home-panel-img {
   height:570px;
 }
-
-
 }
 
 @media (min-width: 870px) {
@@ -82,7 +81,7 @@
     max-width: 840px;
   }
   body {
-    font-size: 14px;
+    font-size: 12.5px;
   }
 
   .img-fluid-half-page {
@@ -93,7 +92,6 @@
 .home-panel-img {
   height:610px;
 }
-
 }
 
 @media (min-width: 990px) {
@@ -111,6 +109,10 @@
 }
 .home-panel-img {
   height:640px;
+}
+
+.home-btn {
+  font-size:16px;
 }
 
 
@@ -149,4 +151,7 @@
   .home-panel-img {
     height:720px;
   }
+  .home-btn {
+  font-size:18px;
+}
 }
