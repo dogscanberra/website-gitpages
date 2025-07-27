@@ -1,8 +1,7 @@
 <div class="row my-2">
     <div class="text-center w-100">
-        <a class="btn-paw align-items-center" style="text-decoration: none" data-bs-toggle="collapse" data-bs-target="#walk-a-dog" role="button" aria-expanded="false" aria-controls="walk-a-dog">
+        <a class="align-items-center" style="text-decoration: none" data-bs-toggle="collapse" data-bs-target="#walk-a-dog" role="button" aria-expanded="false" aria-controls="walk-a-dog">
             <span class="page-subtitle mb-0">Walk a Dog</span>
-            <!-- <img src="assets\branding\ColourPaw.png" class="ml-2"> -->
             <div class="arrow"></div>
 
         </a>        
@@ -20,9 +19,8 @@
 <div class="divider my-3"></div>
 <div class="row my-2">
     <div class="text-center w-100">
-        <a class="btn-paw align-items-center" style="text-decoration: none" data-bs-toggle="collapse" data-bs-target="#foster-a-dog" role="button" aria-expanded="false" aria-controls="foster-a-dog">
+        <a class="align-items-center" style="text-decoration: none" data-bs-toggle="collapse" data-bs-target="#foster-a-dog" role="button" aria-expanded="false" aria-controls="foster-a-dog">
             <span class="page-subtitle mb-0">Foster or Adopt</span>
-            <!-- <img src="assets\branding\ColourPaw.png" class="ml-2"> -->
             <div class="arrow"></div>
         </a>        
     </div>
@@ -36,6 +34,7 @@
     If you are interested in joining our network of foster carers or would like to adopt one of our dogs, please fill out our <a style="font-weight:bold" href="https://forms.gle/8Wgqcwv9EFuUzkQm6" target="_blank">Foster and Adoption Expression of Interest Form</a>.
   </div>
 </div>
+
 <!-- <div class="divider my-3"></div>
 <div class="row my-2">
     <div class="text-center w-100">
@@ -52,25 +51,26 @@
 </div> -->
 
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash;
-  
-      if (hash) {
-        const collapseElement = document.querySelector(hash);
-        const toggleButton = document.querySelector(`[data-bs-toggle="collapse"][data-bs-target="${hash}"]`);
-  
-        if (collapseElement) {
-          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseElement);
-          bsCollapse.show();
-  
-          // ✅ Update the aria-expanded attribute manually
-          if (toggleButton) {
-            toggleButton.setAttribute("aria-expanded", "true");
-          }
-          history.replaceState(null, null, ' ');
-        }
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const collapseElement = document.querySelector(hash);
+      const toggleButton = document.querySelector(`[data-bs-toggle="collapse"][data-bs-target="${hash}"]`);
+
+      if (collapseElement) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseElement);
+        bsCollapse.show(); // <-- Only open, do NOT toggle on load
+
+        // Let Bootstrap handle aria-expanded automatically
+        // Optionally scroll into view:
+        // collapseElement.scrollIntoView({ behavior: 'smooth' });
+
+        // Clear hash to prevent repeated behavior
+        history.replaceState(null, null, ' ');
       }
-    });
+    }
+  });
 </script>
   
 <div class="divider my-3"></div>
@@ -204,7 +204,25 @@
                     </div>
                     <div class="mt10 row">
                         {% if dog.walk %}
-                        <a href='{{ dog.walk-url }}' target="_blank" class="dog-btn btn btn-primary">Walk Me!</a>  
+                        <button onclick="openModal('{{dog.name}}')" class="dog-btn btn btn-primary">Walk Me!</button>  
+                            <!-- Walk Modal -->
+                        <div id="{{dog.name}}" class="modal">
+                            <div class="modal-content">
+                                <div class="row d-flex align-items-center justify-content-between">
+                                    <div style="width: fit-content">
+                                        To walk this dog you must be a Community Member. Are you a Community Member?
+                                    </div>
+                                    <div class="close" onclick="closeModal('{{dog.name}}')" style="width: fit-content">
+                                        &times;
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                        <a href='{{dog.walk-url}}' target="_blank" class="dog-btn btn btn-primary">Yes</a>  
+                                        <a href='https://forms.gle/5jmFesADABSEAyBF7' target="_blank" class="dog-btn btn btn-primary">No</a>
+                                </div>
+                            </div>
+                        </div>
+
                         {% endif %}
                         {% if dog.foster or dog.adopt %}
                         <a href='https://forms.gle/8Wgqcwv9EFuUzkQm6' target="_blank" class="dog-btn btn btn-secondary">Foster or Adopt</a>  
@@ -214,6 +232,25 @@
             </div>
         </div>
     </div>
-
     {% endfor %}
 </div>
+
+<!-- Modal Script -->
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(function(modal) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+</script>

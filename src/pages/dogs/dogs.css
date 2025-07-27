@@ -7,7 +7,10 @@
   padding: 5px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);  
-  margin:0 0 5px 10px;
+  margin: 0 0 5px 10px;
+  pointer-events: none;
+  position: relative; /* Add this */
+  z-index: -1; /* Add this to put it behind the text */
 }
 
 .btn-paw {
@@ -154,6 +157,7 @@
   font-size:14px;
 }
 
+/* Modal CSS in src/getinvolved/membership.css */
 
 /* .no-wrap { 
   white-space: nowrap;

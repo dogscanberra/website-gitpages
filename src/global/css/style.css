@@ -1014,7 +1014,7 @@ ul.social-buttons li a:active {
 
 /* =Carousel
 -------------------------------------------------------------- */
-.carousel-caption {
+/* .carousel-caption {
     background-color:rgba(0, 0, 0, 0.5);
     width:100%;
     left:auto;
@@ -1079,7 +1079,7 @@ ul.social-buttons li a:active {
 
 .fade-quote-carousel.carousel p {
   color: #fff;
-}
+} */
 
 /* =Media Queries
 -------------------------------------------------------------- */
