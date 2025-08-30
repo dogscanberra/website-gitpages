@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include root/head.html %}
+    <body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+        <div id="royal_preloader"></div>
+        {% include root/navbar.html %}
+        <div class="row w-100">
+            <div class="text-center pb20 w-100" style="padding-left:0;padding-right:0">
+                <h1 class="welcome-title">
+                    {{ page.heading }}
+                </h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-light navbar-default">
+            <ul class="navbar-nav navbar-nav-2 mt-0">
+                <li class="nav-item"><a href="{{ site.baseurl }}/services.html" data-id="services" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Our Services</a></li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/walk.html" data-id="walk" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Walk</a></li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/foster.html" data-id="foster" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Foster</a></li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/adopt.html" data-id="adopt" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Adopt</a></li>
+                <li class="nav-item"><a href="{{ site.baseurl }}/veterans.html" data-id="veterans" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Veterans</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            {{ content }}
+        </div>
+        <div style="padding-top: 70px;">
+        </div>
+        {% include root/javascript.html %}
+        {% include root/footer.html %}
+    </body>
+</html>

@@ -14,8 +14,19 @@
             <ul class="navbar-nav mt-0">
                 <li class="nav-item"><a href="{{ site.baseurl }}/#home" data-id="home" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Home</a> </li>
                 <li class="nav-item"><a href='{{ site.baseurl }}/about.html' data-id="about" class="{% if page.url=='/about.html' %} font-weight-bold {% endif %}">About</a> </li>
-                <!-- <li class="nav-item"><a href='{{ site.baseurl }}/services.html' data-id="services" class="{% if page.url=='/services.html' %} font-weight-bold {% endif %}">Services</a> </li> -->
-                <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs" class="{% if page.url=='/dogs.html' %} font-weight-bold {% endif %}">Help a Dog</a> </li>
+                <!-- <li class="nav-item"><a href='{{ site.baseurl }}/services.html' data-id="services" class="{% if page.url=='/about.html' %} font-weight-bold {% endif %}">Services</a> </li>                 -->
+                <li class="nav-item dropdown" style="justify-content: center;">
+                    <a href='{{ site.baseurl }}/services.html' data-id="services" class="dropbtn {% if page.url=='/services.html' %} font-weight-bold {% endif %}">Services
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="{{ site.baseurl }}/walk.html">Walk</a>
+                        <a href="{{ site.baseurl }}/foster.html">Foster</a>
+                        <a href="{{ site.baseurl }}/adopt.html">Adopt</a>
+                        <a href="{{ site.baseurl }}/veterans.html">Veterans</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs" class="{% if page.url=='/dogs.html' %} font-weight-bold {% endif %}">Dogs</a> </li>
                 <li class="nav-item"><a href='{{ site.baseurl }}/team.html' data-id="team" class="{% if page.url=='/team.html' %} font-weight-bold {% endif %}">Team</a> </li>
                 <!--li class="nav-item"><a href='{{ site.baseurl }}/social.html' data-id="social">Media</a> </li-->
                 <!--li class="nav-item"><a href='{{ site.baseurl }}/gallery.html' data-id="gallery">Gallery</a> </li-->

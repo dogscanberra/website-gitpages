@@ -905,6 +905,54 @@ ul.social-buttons li a:active {
     padding: 12px 0;
 } */
 
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+/* .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+} */
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position:relative;
+  background-color: var(--lighter);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--tertiary);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* =Jumbotron Main
 -------------------------------------------------------------- */
 /* .jumbotron.jumbotron-main {
@@ -1165,6 +1213,7 @@ ul.social-buttons li a:active {
 }
 
 .navbar-brand {
+    margin-right: 0;
     display: flex;
     align-items: center;
     padding: 0;
@@ -1217,11 +1266,18 @@ ul.social-buttons li a:active {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    overflow: visible;
 }
+
+.navbar-nav-2 {
+  flex-direction: row !important;
+  font-size: 14px;
+}
+
 
 /* Media Queries */
 
-@media (min-width: 740px) {
+@media (min-width: 850px) {
     .navbar-collapse {
       display: flex !important;
     }
@@ -1230,6 +1286,9 @@ ul.social-buttons li a:active {
     }
     .navbar-nav {
       flex-direction: row !important;
+    }
+    .dropdown-content {
+      position:absolute;
     }
   }
 

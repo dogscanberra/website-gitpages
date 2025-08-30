@@ -1,6 +1,6 @@
 ---
 name: Tofu
-img: assets/dog_photos/Tofu_icons.jpg
+img: assets\dog_photos\Tofu 2.jpg
 walk: true
 foster: false
 adopt: false
