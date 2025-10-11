@@ -12,11 +12,10 @@
         
         <div class="collapse navbar-collapse" id="navbar-dcbr">
             <ul class="navbar-nav mt-0">
-                <li class="nav-item"><a href="{{ site.baseurl }}/#home" data-id="home" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Home</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/about.html' data-id="about" class="{% if page.url=='/about.html' %} font-weight-bold {% endif %}">About</a> </li>
-                <!-- <li class="nav-item"><a href='{{ site.baseurl }}/services.html' data-id="services" class="{% if page.url=='/about.html' %} font-weight-bold {% endif %}">Services</a> </li>                 -->
-                <li class="nav-item dropdown" style="justify-content: center;">
-                    <a href='{{ site.baseurl }}/services.html' data-id="services" class="dropbtn {% if page.url=='/services.html' %} font-weight-bold {% endif %}">Services
+                <li class="nav-item {% if page.url=='/' %}active{% endif %}"><a href="{{ site.baseurl }}/#home" data-id="home">Home</a> </li>
+                <li class="nav-item {% if page.url=='/about.html' %}active{% endif %}"><a href='{{ site.baseurl }}/about.html' data-id="about">About</a> </li>
+                <li class="nav-item dropdown {% if page.url=='/services.html' %}active{% endif %}" style="justify-content: center;">
+                    <a href='{{ site.baseurl }}/services.html' data-id="services" class="dropbtn">&nbsp;Services
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <div class="dropdown-content">
@@ -26,13 +25,49 @@
                         <a href="{{ site.baseurl }}/veterans.html">Veterans</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs" class="{% if page.url=='/dogs.html' %} font-weight-bold {% endif %}">Dogs</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/team.html' data-id="team" class="{% if page.url=='/team.html' %} font-weight-bold {% endif %}">Team</a> </li>
+                <li class="nav-item {% if page.url=='/dogs.html' %}active{% endif %}"><a href='{{ site.baseurl }}/dogs.html' data-id="dogs">Dogs</a> </li>
+                <li class="nav-item {% if page.url=='/team.html' %}active{% endif %}"><a href='{{ site.baseurl }}/team.html' data-id="team">Team</a> </li>
                 <!--li class="nav-item"><a href='{{ site.baseurl }}/social.html' data-id="social">Media</a> </li-->
                 <!--li class="nav-item"><a href='{{ site.baseurl }}/gallery.html' data-id="gallery">Gallery</a> </li-->
-                <li class="nav-item"><a href="{{ site.baseurl }}/contact.html" data-id="contact" class="{% if page.url=='/contact.html' %} font-weight-bold {% endif %}">Contact</a> </li>
-                <li class="nav-item"><a href='{{ site.baseurl }}/support.html' data-id="getinvolved" class="{% if page.url=='/support.html' %} font-weight-bold {% endif %}">Donate</a> </li>
+                <li class="nav-item {% if page.url=='/contact.html' %}active{% endif %}"><a href="{{ site.baseurl }}/contact.html" data-id="contact">Contact</a> </li>
+                <li class="nav-item"><a href='https://www.mycause.com.au/p/348240/support-the-paws-aid-dogscbr' target="_blank" data-id="getinvolved">Donate</a> </li>
             </ul>
         </div>
      </nav>
 </header>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector(".dropbtn");
+
+        toggle.addEventListener("click", function (e) {
+        // Only apply behavior on mobile widths
+        if (window.innerWidth <= 992) {
+            // If dropdown is not already open
+            if (!dropdown.classList.contains("open")) {
+            e.preventDefault(); // Prevent navigation
+            dropdown.classList.add("open");
+
+            // Close others (optional)
+            dropdowns.forEach((other) => {
+                if (other !== dropdown) other.classList.remove("open");
+            });
+            } else {
+            // Already open — allow normal navigation
+            dropdown.classList.remove("open"); // optional: close after click
+            }
+        }
+        });
+    });
+
+    // Optional: close dropdowns when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".dropdown")) {
+        dropdowns.forEach((dropdown) => dropdown.classList.remove("open"));
+        }
+    });
+    });
+
+</script>

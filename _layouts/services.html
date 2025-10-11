@@ -11,13 +11,13 @@
                 </h1>
             </div>
         </div>
-        <nav class="navbar navbar-light navbar-default">
-            <ul class="navbar-nav navbar-nav-2 mt-0">
-                <li class="nav-item"><a href="{{ site.baseurl }}/services.html" data-id="services" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Our Services</a></li>
-                <li class="nav-item"><a href="{{ site.baseurl }}/walk.html" data-id="walk" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Walk</a></li>
-                <li class="nav-item"><a href="{{ site.baseurl }}/foster.html" data-id="foster" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Foster</a></li>
-                <li class="nav-item"><a href="{{ site.baseurl }}/adopt.html" data-id="adopt" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Adopt</a></li>
-                <li class="nav-item"><a href="{{ site.baseurl }}/veterans.html" data-id="veterans" class="{% if page.url=='/' %} font-weight-bold {% endif %}">Veterans</a></li>
+        <nav class="navbar navbar-nav-2 navbar-light navbar-default">
+            <ul class="navbar-nav  mt-0">
+                <li class="nav-item {% if page.url=='/services.html' %}active{% endif %}"><a href="{{ site.baseurl }}/services.html" data-id="services">Services</a></li>
+                <li class="nav-item {% if page.url=='/walk.html' %}active{% endif %}"><a href="{{ site.baseurl }}/walk.html" data-id="walk">Walk</a></li>
+                <li class="nav-item {% if page.url=='/foster.html' %}active{% endif %}"><a href="{{ site.baseurl }}/foster.html" data-id="foster">Foster</a></li>
+                <li class="nav-item {% if page.url=='/adopt.html' %}active{% endif %}"><a href="{{ site.baseurl }}/adopt.html" data-id="adopt">Adopt</a></li>
+                <li class="nav-item {% if page.url=='/veterans.html' %}active{% endif %}"><a href="{{ site.baseurl }}/veterans.html" data-id="veterans">Veterans</a></li>
             </ul>
         </nav>
         <div class="container">
