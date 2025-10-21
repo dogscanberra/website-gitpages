@@ -1,0 +1,14 @@
+
+{% for event in site.events %}
+<div class="row">
+  <div class="col-4">
+   <img src="{{event.image}}" style="width:150px; height:100px">
+  </div>
+  <div class="col-8">
+    <h2 class="page-subtitle">
+      {{event.name}}
+    </h2>
+  </div>
+</div>
+{% endfor %}
+

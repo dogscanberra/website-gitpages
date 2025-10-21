@@ -39,6 +39,8 @@ collections:
     output: true
   team:
     output: true
+  events:
+    output: true
   policies:
     output: true
   gallery:
