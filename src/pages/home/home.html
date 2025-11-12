@@ -1,125 +1,156 @@
-<div class="row" style="margin: -25px 0; align-items: center;">
-    {% comment %}
-    {% include_relative src/pages/home/paws.html %}
-    {% endcomment %}
-    <div id="photobooth" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-        <div id="mini-gallery" class="carousel-inner">
-            {% assign image_counter = 0 %}
-            {% for dog in site.static_files %}
-            {% if dog.path contains 'assets/photo_gallery/home_photos' %}
-            <div class="carousel-item {% if image_counter==0 %}active{% endif %}">
-                <img src="{{ site.baseurl }}{{ dog.path }}" class="d-block">
-            </div>
-            {% assign image_counter = image_counter | plus: 1 %}
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="carousel-indicators" style="position: absolute; bottom: 20px;">
-            {% assign image_counter = 0 %}
-            {% for dog in site.static_files %}
-            {% if dog.path contains 'assets/photo_gallery/home_photos' %}{% if image_counter < 10 %}
-            <button type="button" data-bs-target="#photobooth" data-bs-slide-to="{{ image_counter }}" class="{% if image_counter==0 %}active{% endif %} paw-button mx-1 d-flex align-items-center" aria-current="true" aria-label="Slide {{ image_counter +1}}">
-                <img src="{{ site.baseurl }}/assets/branding/WhitePaw2.png" class="paw-button"
-                data-active-src="{{ site.baseurl }}/assets/branding/ColourPaw.png">
-            </button>
-            {% assign image_counter = image_counter | plus: 1 %}
-            {% endif %}{% endif %}
-            {% endfor %}
-        </div>
-            
+{% comment %} {% include_relative src/pages/home/paws.html %} {% endcomment %}
+<div
+  id="photobooth"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-interval="8000"
+>
+  <div id="mini-gallery" class="carousel-inner">
+    {% assign image_counter = 0 %} {% for dog in site.static_files %} {% if
+    dog.path contains 'assets/photo_gallery/home_photos' %}
+    <div class="carousel-item {% if image_counter==0 %}active{% endif %}">
+      <img src="{{ site.baseurl }}{{ dog.path }}" class="d-block" />
     </div>
+    {% assign image_counter = image_counter | plus: 1 %} {% endif %} {% endfor
+    %}
+  </div>
+  <div class="carousel-indicators" style="position: absolute; bottom: 20px">
+    {% assign image_counter = 0 %} {% for dog in site.static_files %} {% if
+    dog.path contains 'assets/photo_gallery/home_photos' %}{% if image_counter <
+    10 %}
+    <button
+      type="button"
+      data-bs-target="#photobooth"
+      data-bs-slide-to="{{ image_counter }}"
+      class="{% if image_counter==0 %}active{% endif %} paw-button mx-1 d-flex align-items-center"
+      aria-current="true"
+      aria-label="Slide {{ image_counter +1}}"
+    >
+      <img
+        src="{{ site.baseurl }}/assets/branding/WhitePaw2.png"
+        class="paw-button"
+        data-active-src="{{ site.baseurl }}/assets/branding/ColourPaw.png"
+      />
+    </button>
+    {% assign image_counter = image_counter | plus: 1 %} {% endif %}{% endif %}
+    {% endfor %}
+  </div>
 </div>
 
-<div class="row" style="margin: 0 0;">
-    <div class="col-12 text-center" style="padding: 0; margin: 60px 0 100px">
-        <h2 class="tagline">"Improving the lives of shelter dogs, while supporting community mental health!"</h2>
-    </div>
-    <div class="col-12" style="padding:0; position: relative; top:0;left:0;width:100%;">
-        <img class="home-panel-img" src="assets/styling/home-backdrop.png">
-        <img class="home-panel-img hpi-1" src="assets/styling/home-backdrop.png">
-        <img class="home-panel-img hpi-2" src="assets/styling/home-backdrop.png">
-
-    </div>
+<div class="row" style="margin: 0 0">
+  <div class="text-center" style="padding: 0 30px; margin: 60px 0 100px">
+    <h2 class="tagline">
+      "Improving the lives of shelter dogs, while supporting community mental
+      health!"
+    </h2>
+  </div>
+  <div style="padding: 0; position: relative; top: 0; left: 0; width: 100%">
+    <img class="home-panel-img" src="assets/styling/home-backdrop.png" />
+    <img class="home-panel-img hpi-1" src="assets/styling/home-backdrop.png" />
+    <img class="home-panel-img hpi-2" src="assets/styling/home-backdrop.png" />
+  </div>
 </div>
-<div class="container-2" style="padding-bottom: 100px;">
-    <div class="row">
-        <div class="col-12 col-sm-6">
-            <div class="row w-100 mb20 mx-0">
-                <img src="assets\photo_gallery\Group Photo at ANU Event 2023 - cropped.jpg" class="img-fluid-half-page">
-            </div>
+<div class="container" style="padding-bottom: 100px">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row mb20 mx-0">
+        <img
+          src="assets\photo_gallery\Group Photo at ANU Event 2023 - cropped.jpg"
+          class="img-fluid-half-page"
+        />
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="row mb20 mx-0">
+        <h2 class="page-subtitle">Welcome to Dogs Canberra!</h2>
+        <p>
+          As a registered charity, we focus on rehabilitating dogs from
+          traditional shelters, helping them build resilience through
+          professional training and community interaction.
+          <br /><br />
+          Our open-shelter model allows people to walk, play, and bond with our
+          dogs—benefiting both pups and humans alike. Through our Pilot Program
+          (2024-2025), we're creating lasting connections while reducing shelter
+          overcrowding.
+          <br /><br />
+        </p>
+        <i>Join us in making a difference, one wagging tail at a time!</i>
+      </div>
+      <div class="row w-100 mb20 mx-0" style="justify-content: flex-end">
+        <a
+          href="{{ site.baseurl }}/about.html"
+          data-id="about"
+          class="btn btn-primary"
+          >More About Us</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row pt20 mt60 mx-0">
+    <h2 class="page-subtitle">We Have Something For Everyone...</h2>
+  </div>
+  <div class="row p10">
+    <div class="col-lg-4" style="padding-top: 15px">
+      <div class="row home-tile">
+        <div class="col-md-6 col-lg-12 home-photo">
+          <img src="assets/dog_photos/Tofu 2.jpg" />
         </div>
-        <div class="col-12 col-sm-6">
-            <div class="row w-100 mb20 mx-0">
-                <h2 class="page-subtitle">Welcome to Dogs Canberra!</h2>
-                <p>
-                As a registered charity, we focus on rehabilitating dogs from traditional shelters, helping them build resilience through professional training and community interaction. 
-                <br><br>
-                Our open-shelter model allows people to walk, play, and bond with our dogs—benefiting both pups and humans alike. Through our Pilot Program (2024-2025), we're creating lasting connections while reducing shelter overcrowding. 
-                <br><br>
-                </p>
-                <i>Join us in making a difference, one wagging tail at a time!</i>          
-            </div>
-            <div class="row w-100 mb20 mx-0" style="justify-content: flex-end;">
-                <a href='{{ site.baseurl }}/about.html' data-id="about" class="btn btn-primary">More About Us</a>            
-            </div>
+        <div class="col-md-6 col-lg-12 home-content">
+          <h3 class="sub-heading">Walk</h3>
+          <p>
+            Spend time with our dogs, giving them love, exercise, and
+            socialisation.
+          </p>
+          <a
+            href="{{ site.baseurl }}/walk.html"
+            data-id="walk"
+            class="btn btn-primary btn-home"
+            >Walk a Dog</a
+          >
         </div>
-
-    </div>
-    <div class="row pt20 mt60 mx-0">
-        <h2 class="page-subtitle">We Have Something For Everyone...</h2>
-    </div>
-    <div class="row pt20">
-            <div class="col-12 col-md-4" style="padding-top: 15px;">
-                <div class="home-tile">
-                    <div class="w-100 home-photo">
-                        <img src="assets/dog_photos/Tofu 2.jpg">
-                    </div>
-                    <div class="w-100 home-content">
-                        <div class="w-100">
-                            <h3 class="sub-heading">Walk</h3>
-                        </div>
-                        <div class="w-100">
-                            Spend time with our dogs, giving them love, exercise, and socialisation.
-                        </div>
-                        <a href='{{ site.baseurl }}/walk.html' data-id="walk" class="btn btn-primary btn-home">Walk a Dog</a>                
-                    </div>    
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4" style="padding-top: 15px;">
-                <div class="home-tile">
-                    <div class="w-100 home-photo">
-                        <img src="assets/dog_photos/Kingsley_03.jpg">
-                    </div>
-                    <div class="w-100 home-content">
-                        <div class="w-100">
-                            <h3 class="sub-heading">Foster</h3>
-                        </div>
-                        <div class="w-100">
-                            Provide a temporary home and help a dog on their journey to adoption.
-                        </div>
-                        <a href='{{ site.baseurl }}/foster.html' data-id="foster" class="btn btn-primary btn-home">Foster a Dog</a>                
-                    </div>    
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4" style="padding-top: 15px;">
-                <div class="home-tile">
-                    <div class="w-100 home-photo">
-                        <img src="assets/dog_photos/Kingsley_01.jpg">
-                    </div>
-                    <div class="w-100 home-content">
-                        <div class="w-100">
-                            <h3 class="sub-heading">Adopt</h3>
-                        </div>
-                        <div class="w-100">
-                            Find your perfect match and give a rescued dog a loving, forever home.
-                        </div>
-                        <a href='{{ site.baseurl }}/adopt.html' data-id="adopt" class="btn btn-primary btn-home">Adopt a Dog</a>                
-                    </div>    
-                </div>
-            </div>
-
+      </div>
     </div>
 
+    <div class="col-lg-4" style="padding-top: 15px">
+      <div class="row home-tile">
+        <div class="col-md-6 col-lg-12 home-photo">
+          <img src="assets/dog_photos/Kingsley_03.jpg" />
+        </div>
+        <div class="col-md-6 col-lg-12 home-content">
+          <h3 class="sub-heading">Foster</h3>
+          <p>
+            Provide a temporary home and help a dog on their journey to
+            adoption.
+          </p>
+          <a
+            href="{{ site.baseurl }}/foster.html"
+            data-id="foster"
+            class="btn btn-primary btn-home"
+            >Foster a Dog</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4" style="padding-top: 15px">
+      <div class="row home-tile">
+        <div class="col-md-6 col-lg-12 home-photo">
+          <img src="assets/dog_photos/Kingsley_01.jpg" />
+        </div>
+        <div class="col-md-6 col-lg-12 home-content">
+          <h3 class="sub-heading">Adopt</h3>
+          <p>
+            Find your perfect match and give a rescued dog a loving, forever
+            home.
+          </p>
+          <a
+            href="{{ site.baseurl }}/adopt.html"
+            data-id="adopt"
+            class="btn btn-primary btn-home"
+            >Adopt a Dog</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

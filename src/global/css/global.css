@@ -1,88 +1,116 @@
-
-.welcome-title, h1 {
-  color: var(--primary);
+.welcome,
+h1 {
+  color: var(--lighter);
   font-family: "Inria-Serif";
   font-optical-sizing: auto;
-  font-weight: normal;
-  font-size: 72px;
+  font-weight: 500;
+  font-size: 80px;
 }
 
-.page-subtitle, h2 {
-  font-family: 'Montserrat', sans-serif;
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: bold;
-  font-size: 24px;
   margin-top: 1%;
   color: var(--primary);
+}
+
+h2 {
+  font-weight: bold;
+  padding-top: 10px;
+}
+/* h2 styles */
+.page-subtitle {
+  font-size: 24px;
   padding-bottom: 10px;
 }
 
-.sub-heading, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
+.box-heading {
+  font-size: 16px;
+}
+
+.sub-heading,
+h3 {
   font-weight: normal;
   font-size: 20px;
-  margin-top: 1%;
-  color: var(--primary);
   padding-bottom: 20px;
 }
 
-.tagline, h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
+h4 {
   font-weight: bold;
   font-style: italic;
   font-size: 30px;
-  margin-top: 1%;
-  color: var(--primary);
+}
+
+.tagline {
+  text-align: center;
   padding-bottom: 40px;
+}
+
+.caption,
+h5 {
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 10px;
 }
 
 body {
   background-color: var(--background);
-  font-family: 'Montserrat', sans-serif;
-  /* font-size: 16px; */
-  font-weight: 300;
-  padding-top: 90px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 65px;
   text-align: left;
-  color:black;
+  color: black;
   height: 100%;
   min-height: 100% !important;
 }
 
 hr.dotted {
-  border-top: 3px dotted var(--primary)
+  border-top: 3px dotted var(--primary);
 }
-
 
 /* Headings based on window size */
 
-
-@media (max-width: 870px) {
-  .welcome-title, h1 {
-    font-size: 4rem;
+@media (max-width: 1199.98px) {
+  .welcome-title,
+  h1 {
+    font-size: 3rem;
   }
-  
-  .page-subtitle, h2 {
+
+  .page-subtitle,
+  h2 {
     font-size: 1.3rem;
   }
 
-  .sub-heading, h3 {
+  .sub-heading,
+  h3 {
     font-size: 1.1rem;
   }
-} 
-
+  body {
+    font-size: 14px;
+  }
+}
 
 /* For screens smaller than 480px (e.g., small mobile screens) */
-@media (max-width: 580px) {
-  .welcome-title, h1 {
-    font-size: 3rem;
+@media (max-width: 767.98px) {
+  .welcome-title,
+  h1 {
+    font-size: 2.5rem;
   }
-  .page-subtitle, h2 {
+  .page-subtitle,
+  h2 {
     font-size: 1.2rem;
   }
-  
-  .sub-heading, h3 {
+
+  .sub-heading,
+  h3 {
     font-size: 1rem;
+  }
+  body {
+    font-size: 16px;
   }
 }

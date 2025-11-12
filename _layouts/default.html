@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include root/head.html %}
-    <body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
-        <div id="royal_preloader"></div>
-        {% include root/navbar.html %}
-        <div class="container">
-            <div class="row">
-                <div class="text-center pb20 w-100">
-                    <h1 class="welcome-title">
-                        {{ page.heading }}
-                    </h1>
-                </div>
-            </div>
-            {{ content }}
-        </div>
-        <div style="padding-top: 70px;">
-        </div>
-        {% include root/javascript.html %}
-        {% include root/footer.html %}
-    </body>
+  {% include root/head.html %}
+  <body
+    class="royal_preloader"
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="70"
+  >
+    <div id="royal_preloader"></div>
+    {% include root/navbar.html %}
+    <div class="row heading-box">
+      <img
+        src="assets\photo_gallery\Group Photo at ANU Event 2023 - cropped.jpg"
+        alt="Group Photo at ANU Event 2023"
+      />
+      <div class="text-center">
+        <h1 class="welcome-title">{{ page.heading }}</h1>
+        <!-- <p>{{page.caption}}</p> -->
+      </div>
+    </div>
+    <div class="container mt20">{{ content }}</div>
+    <div style="padding-top: 70px"></div>
+    {% include root/javascript.html %} {% include root/footer.html %}
+  </body>
 </html>

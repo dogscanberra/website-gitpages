@@ -1,29 +1,22 @@
 <div id="dogscbr-team" class="row">
-    {% for person in site.team %}
-    <div class="col-12 col-md-6 staff-container"> <!--Container is empty, just provides spacing and padding -->
-        <div class="row staff-tile d-flex"> <!--Provides the border and is the visible region-->
-            <div class="col-12 col-md-6 pt15 pb15 team-detail"> <!--Text content for team tile-->
-                <p class="team-name">
-                    {{ person.firstname }} {{ person.lastname }}
-                </p>
-                <p class="team-role">
-                    {{ person.role }}
-                </p>
-                <p class="team-email"> {% if person.email!="None" %}     
-                    <a href="mailto:{{ person.email }}">
-                        {{ person.email }}
-                    </a> 
-                    {% else %}
-                    <p>
-                        {{ person.firstname }} does not have a Dogs Canbera email, but you can reach out to one of our <a href="{{ site.baseurl }}/contact.html">other email addresses</a>.
-                    </p>
-                    {% endif %}
-                </p>
-            </div>
-            <div class="col-12 col-md-6 team-photo"><!--Image content for team tile-->
-                <img src="{{ site.baseurl }}{{ person.img }}">
-            </div>
-        </div>
+  {% for person in site.team %}
+  <div class="col-12 col-md-6 staff-container">
+    <!--Container is empty, just provides spacing and padding -->
+    <div class="row staff-tile d-flex">
+      <!--Provides the border and is the visible region-->
+      <div class="col pt15 team-detail">
+        <!--Text content for team tile-->
+        <p class="team-name">{{ person.firstname }} {{ person.lastname }}</p>
+        <p class="team-role">{{ person.role }}</p>
+        <p class="team-email">
+          <a href="mailto:{{ person.email }}"> {{ person.email }} </a>
+        </p>
+      </div>
+      <div class="col team-photo">
+        <!--Image content for team tile-->
+        <img src="{{ site.baseurl }}{{ person.img }}" />
+      </div>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
