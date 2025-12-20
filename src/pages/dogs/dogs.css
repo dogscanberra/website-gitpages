@@ -6,7 +6,7 @@
   display: inline-block;
   padding: 5px;
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);  
+  -webkit-transform: rotate(45deg);
   margin: 0 0 5px 10px;
   pointer-events: none;
   position: relative; /* Add this */
@@ -14,44 +14,44 @@
 }
 
 .btn-paw {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .btn-paw img {
-    width: 40px;
-    height: 40px;
-    padding: 0 0 10px 10px;
-    transition: transform 0.2s ease;
+  width: 40px;
+  height: 40px;
+  padding: 0 0 10px 10px;
+  transition: transform 0.2s ease;
 }
 
 .divider {
-    height: 3px;
-    background-color: var(--navbar-colour);
-    width: 100%;
+  height: 3px;
+  background-color: var(--navbar-colour);
+  width: 100%;
 }
 
 /* Glossary box */
 
 .glossary-box {
-    background-color: var(--navbar-colour);
-    border-radius: 20px;
-    margin: 0 10px;
-    padding: 10px;
-    font-size:20px;
+  background-color: var(--navbar-colour);
+  border-radius: 20px;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .icon {
-    min-width: fit-content;
-    font-size:16px;
-    padding: 0 6px;
+  min-width: fit-content;
+  font-size: 16px;
+  padding: 0 6px;
 }
 
-.icon img{
-    width: 50px;
-    height: 50px;
+.icon img {
+  width: 50px;
+  height: 50px;
 }
 
 .logo-wrapper {
@@ -87,46 +87,36 @@
 /* Dog Tile: photo, details, etc. */
 
 .dog-tile {
-    display: flex;
-    background-color: var(--lighter);
-    border-radius: 20px;
-    margin: 0;
-    font-size: 10px;
-    /* border: 2px solid var(--secondary); */
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.dog-photo {
-    width: 100%;
-    height:350px;
-    aspect-ratio: 1 / 1 !important;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    margin:0;
-    padding:0;
+  display: flex;
+  background-color: var(--lighter);
+  border-radius: 20px;
+  margin: 0;
+  font-size: 10px;
+  /* border: 2px solid var(--secondary); */
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .dog-photo-wrapper {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   z-index: 1;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-.hover-expand-dog-photo {
-  transition: width 0.4s ease, z-index 0s;
-  position: relative;
-  z-index: 1;
+.dog-photo-wrapper > img {
+  width: 100%;
+  height: 350px;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.4s ease, z-index 0s;
 }
 
-.dog-photo-wrapper:hover .hover-expand-dog-photo {
-  width: 125%;
-  z-index: 10;
+.dog-photo-wrapper:hover > img {
+  transform: scale(1.25);
 }
-
-/* .dog-photo:hover {
-    transform: scale(1.05);
-} */
 
 .dog-name {
   font-size: 18px;
@@ -136,13 +126,13 @@
   max-width: 40px;
 }
 
-.icon-small img{
+.icon-small img {
   width: 30px;
   height: 30px;
 }
 
 .faded {
-  opacity:0.3;
+  opacity: 0.3;
 }
 
 .info-box {
@@ -150,11 +140,11 @@
 
   margin: 5px;
   padding: 5px;
-  min-width:fit-content;
+  min-width: fit-content;
 }
 
 .dog-btn {
-  font-size:14px;
+  font-size: 14px;
 }
 
 /* Modal CSS in src/getinvolved/membership.css */
@@ -165,36 +155,36 @@
 
 @media (min-width: 700px) {
   .dog-tile {
-      font-size: 11px;
+    font-size: 11px;
   }
   .dog-name {
-  font-size: 20px;
-  } 
+    font-size: 20px;
+  }
 }
 @media (min-width: 870px) {
   .dog-tile {
-      font-size: 12px;
+    font-size: 12px;
   }
   .dog-name {
-  font-size: 22px;
-  } 
+    font-size: 22px;
+  }
 }
 @media (min-width: 992px) {
   .dog-tile {
-      font-size: 14px;
+    font-size: 14px;
   }
   .dog-name {
-  font-size: 26px;
+    font-size: 26px;
   }
 }
 
 /* Mobile-specific style (screens smaller than 768px) */
 @media (max-width: 767.98px) {
-  .dog-tile  {
+  .dog-tile {
     /* margin: 0 12px; */
     width: fit-content;
   }
-  .icon img{
+  .icon img {
     width: 25px;
     height: 25px;
   }
@@ -202,9 +192,9 @@
     font-size: 10px;
   }
   .icon-small {
-  max-width: 30px;
-  } 
-  .icon-small img{
+    max-width: 30px;
+  }
+  .icon-small img {
     width: 20px;
     height: 20px;
   }
@@ -212,12 +202,12 @@
     font-size: 14px;
   }
   .dog-btn {
-    font-size:12px;
-    width:fit-content;
+    font-size: 12px;
+    width: fit-content;
     margin-left: 5px;
     margin-right: 5px;
   }
   .dog-photo {
-    margin-right:0;
+    margin-right: 0;
   }
 }
