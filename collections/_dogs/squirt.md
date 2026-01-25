@@ -2,6 +2,7 @@
 name: Squirt
 img: assets\dog_photos\squirt2.jpg
 walk: true
+location: Duffy
 foster: false
 adopt: true
 outreach: false

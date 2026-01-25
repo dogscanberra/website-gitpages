@@ -1,4 +1,4 @@
-<div class="row my-2">
+<!-- <div class="row my-2">
   <div class="text-center w-100">
     <a
       class="align-items-center"
@@ -93,22 +93,30 @@
   });
 </script>
 
-<div class="divider my-3"></div>
+<div class="divider my-3"></div> -->
 
 <div class="row text-center d-flex">
   <div class="col glossary-box">
     <div class="text-center mb-3">Available Services</div>
     <div class="row d-flex justify-content-center">
       <div class="col-4 icon">
-        <img src="assets\icons\walk.png" />
+        <a href="{{ site.baseurl }}/walk.html"
+          ><img src="assets\icons\walk.png"
+        /></a>
         <div>Walk Me</div>
       </div>
       <div class="col-4 icon">
-        <img src="assets\icons\foster.png" />
+        <a href="{{ site.baseurl }}/foster.html"
+          ><img src="assets\icons\foster.png"
+        /></a>
+
         <div>Foster Me</div>
       </div>
       <div class="col-4 icon">
-        <img src="assets\icons\adopt.png" />
+        <a href="{{ site.baseurl }}/adopt.html"
+          ><img src="assets\icons\adopt.png"
+        /></a>
+
         <div>Adopt Me</div>
       </div>
     </div>
@@ -117,11 +125,17 @@
     <div class="text-center mb-3">Other Roles</div>
     <div class="row d-flex justify-content-center">
       <div class="col-4 icon">
-        <img src="assets\icons\outreach.png" />
+        <div class="logo-wrapper">
+          <img src="assets\icons\outreach.png" />
+          <!-- <div class="tooltip-text">Outreach Dogs engage with our community at events!</div> -->
+        </div>
         <div>Outreach Dog</div>
       </div>
       <div class="col-4 icon">
-        <img src="assets\icons\therapy.png" />
+        <div class="logo-wrapper">
+          <img src="assets\icons\therapy.png" />
+          <!-- <div class="tooltip-text">Our Therapy Dogs </div> -->
+        </div>
         <div>Therapy Dog</div>
       </div>
     </div>
@@ -140,8 +154,10 @@
       <div class="col-8">
         <div class="ml-2">
           <div class="row mt10">
-            <div class="col-6 dog-name">{{ dog.name }}</div>
-            <div class="col-6 d-flex align-items-center justify-content-end">
+            <div class="col-5 col-md-6 dog-name">{{ dog.name }}</div>
+            <div
+              class="col-7 col-md-6 d-flex align-items-center justify-content-end"
+            >
               <div class="row">
                 <div class="col icon-small">
                   <div class="logo-wrapper">
@@ -179,7 +195,7 @@
                     <div class="tooltip-text">Outreach</div>
                   </div>
                 </div>
-                <div class="col icon-small me-4">
+                <div class="col icon-small me-3">
                   <div class="logo-wrapper">
                     <img
                       src="assets\icons\therapy.png"
@@ -206,7 +222,15 @@
               <div>{{dog.breed}}</div>
             </div>
           </div>
-          <div class="mt20">{{ dog.content | markdownify }}</div>
+          <div class="mt20">
+            {% if dog.walk %}
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              {{dog.location}}
+              <br /><br />
+            </div>
+            {% endif %} {{ dog.content | markdownify }}
+          </div>
           <div class="mt10 row">
             {% if dog.walk %}
             <button
