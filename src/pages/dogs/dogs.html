@@ -245,10 +245,9 @@
                 <div
                   class="row d-flex align-items-center justify-content-between"
                 >
-                  <div style="width: fit-content">
-                    To walk this dog you must be a Community Member. Are you a
-                    Community Member?
-                  </div>
+                  <h2 class="page-subtitle" style="width: fit-content">
+                    Walk a Dog
+                  </h2>
                   <div
                     class="close"
                     onclick="closeModal('{{dog.name}}')"
@@ -256,19 +255,40 @@
                   >
                     &times;
                   </div>
+                  <div
+                    class="row d-flex align-items-center justify-content-between"
+                  >
+                    <p>
+                      <strong
+                        >To walk a dog, you'll need to be a Community
+                        Member.</strong
+                      >
+
+                      <br /><br />
+                      <i class="fa-solid fa-paw"></i>
+                      New here? Join our community first.
+                      <br />
+                      <i class="fa-solid fa-paw"></i>
+                      Already part of the pack? Just grab a time slot to walk a
+                      dog.
+                      <br /><br />
+                      Our pups can't wait to meet you!
+                      <br />
+                    </p>
+                  </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                  <a
-                    href="{{dog.walk-url}}"
-                    target="_blank"
-                    class="dog-btn btn btn-primary"
-                    >Yes</a
-                  >
                   <a
                     href="https://forms.gle/5jmFesADABSEAyBF7"
                     target="_blank"
                     class="dog-btn btn btn-primary"
-                    >No</a
+                    >Become a Community Member</a
+                  >
+                  <a
+                    href="{{dog.walk-url}}"
+                    target="_blank"
+                    class="dog-btn btn btn-primary"
+                    >Schedule a Walk</a
                   >
                 </div>
               </div>
