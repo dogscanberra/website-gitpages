@@ -10,7 +10,7 @@ therapy: false
 sex: Male
 age: 2
 breed: Labrador Cross
-walk-url: https://calendly.com/tofu-dogscbr/walk
+walk-url: https://calendly.com/dogscbr/tofu
 ---
 
 Hey there! My name's Tofu and I am kind, caring, and polite. My favourite things to do are tug-of-war and fetch, preferably at the same time!
